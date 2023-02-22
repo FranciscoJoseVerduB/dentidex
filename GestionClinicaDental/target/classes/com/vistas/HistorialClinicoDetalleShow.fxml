@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="708.0" prefWidth="1199.0" stylesheets="@css/DarkTheme.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controladoras.HistorialClinicoDetalleShowController">
+   <children>
+      <TitledPane animated="false" collapsible="false" layoutX="4.0" layoutY="3.0" prefHeight="143.0" prefWidth="962.0" text="Datos de la Cita" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="3.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="181.0" prefWidth="570.0">
+               <children>
+                  <GridPane layoutX="9.6" prefHeight="219.0" prefWidth="953.0" styleClass="grid-pane" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="-9.600000000000023" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="-9.599999999999994">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="782.0">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Id Visita" />
+                                    <TextField fx:id="txtId_Visita" editable="false" prefHeight="26.0" prefWidth="249.0" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="117.0">
+                                 <children>
+                                    <Label text="Fecha Visita" />
+                                    <TextField fx:id="txtFechaVisita" editable="false" prefHeight="26.0" prefWidth="249.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="117.0">
+                                 <children>
+                                    <Label text="Hora" />
+                                    <TextField fx:id="txtHoraVisita" editable="false" prefHeight="26.0" prefWidth="249.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Id CIta" />
+                                    <TextField fx:id="txtId_Cita" editable="false" prefHeight="26.0" prefWidth="249.0">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Id Médico" />
+                                    <TextField fx:id="txtId_Medico" editable="false" prefHeight="26.0" prefWidth="249.0">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="318.0">
+                                 <children>
+                                    <Label text="Nombre Médico" />
+                                    <TextField fx:id="txtMedicoNombre" editable="false" prefHeight="26.0" prefWidth="249.0">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="782.0" GridPane.rowIndex="1">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Id Paciente" />
+                                    <TextField fx:id="txtId_Paciente" editable="false" prefHeight="26.0" prefWidth="249.0" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="434.0">
+                                 <children>
+                                    <Label text="Nombre Paciente" />
+                                    <TextField fx:id="txtPacienteNombre" editable="false" prefHeight="26.0" prefWidth="249.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="117.0">
+                                 <children>
+                                    <Label text="Edad" />
+                                    <TextField fx:id="txtPacienteEdad" editable="false" prefHeight="26.0" prefWidth="249.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Género" />
+                                    <TextField fx:id="txtPacienteGenero" editable="false" prefHeight="26.0" prefWidth="95.0">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="NIF" />
+                                    <TextField fx:id="txtPacienteNif" editable="false" prefHeight="26.0" prefWidth="249.0">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TabPane layoutX="5.0" layoutY="153.0" prefHeight="154.0" prefWidth="962.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="5.0">
+        <tabs>
+          <Tab text="DIENTES PERMANENTES">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane fx:id="dataGridDientesPermanentes" alignment="CENTER" prefHeight="246.0" prefWidth="783.0" styleClass="grid-pane" AnchorPane.bottomAnchor="-3.200000000000017" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="20.0" prefWidth="30.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                             
+                           </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="11" GridPane.columnIndex="7" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="48" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="16" GridPane.columnIndex="2" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="17" GridPane.columnIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="47" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="46" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="15" GridPane.columnIndex="3" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="13" GridPane.columnIndex="5" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="14" GridPane.columnIndex="4" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="44" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="42" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="45" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="12" GridPane.columnIndex="6" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="43" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="22" GridPane.columnIndex="10" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="21" GridPane.columnIndex="9" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="41" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="31" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="32" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="23" GridPane.columnIndex="11" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="24" GridPane.columnIndex="12" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="25" GridPane.columnIndex="13" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="33" GridPane.columnIndex="11" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="34" GridPane.columnIndex="12" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="26" GridPane.columnIndex="14" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="35" GridPane.columnIndex="13" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="27" GridPane.columnIndex="15" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="36" GridPane.columnIndex="14" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="37" GridPane.columnIndex="15" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="28" GridPane.columnIndex="16" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="38" GridPane.columnIndex="16" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="18" /> 
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="DIENTES TEMPORALES">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane fx:id="dataGridDientesTemporales" alignment="CENTER" prefHeight="171.0" prefWidth="976.0" AnchorPane.bottomAnchor="-2.3999999999999773" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="20.0" prefWidth="30.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="51" GridPane.columnIndex="7" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="55" GridPane.columnIndex="3" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="53" GridPane.columnIndex="5" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="54" GridPane.columnIndex="4" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="84" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="82" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="85" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="52" GridPane.columnIndex="6" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="83" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="62" GridPane.columnIndex="10" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="61" GridPane.columnIndex="9" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="81" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="71" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="72" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="63" GridPane.columnIndex="11" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="64" GridPane.columnIndex="12" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="65" GridPane.columnIndex="13" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="73" GridPane.columnIndex="11" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="74" GridPane.columnIndex="12" GridPane.rowIndex="1" />
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="pieza-dental" text="75" GridPane.columnIndex="13" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <GridPane layoutX="8.0" layoutY="313.0" prefHeight="48.0" prefWidth="962.0" styleClass="grid-pane">
+        <columnConstraints>
+          <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="315.4000244140625" minWidth="4.999987602233887" prefWidth="154.40000610351564" />
+          <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="725.5999961853028" minWidth="0.0" prefWidth="64.79999389648438" />
+            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="814.4000091552734" minWidth="0.0" prefWidth="325.9999755859375" />
+            <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" maxWidth="814.4000091552734" minWidth="10.0" prefWidth="136.4000244140625" />
+            <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" maxWidth="814.4000091552734" minWidth="10.0" prefWidth="61.79997558593743" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="175.20004882812498" minWidth="10.0" prefWidth="175.20004882812498" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" text="Cuadrante:" GridPane.columnIndex="3">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtDienteCodigo" editable="false" prefHeight="26.0" prefWidth="53.0" GridPane.columnIndex="1">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txtDienteNombre" editable="false" prefHeight="26.0" prefWidth="583.0" GridPane.columnIndex="2">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </TextField>
+            <Button fx:id="btnReiniciarOdontograma" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnReiniciarOdontograma" prefWidth="127.0" text="Reiniciar" GridPane.columnIndex="5" />
+            <TextField fx:id="txtDienteCuadrante" alignment="CENTER" editable="false" prefHeight="26.0" prefWidth="40.0" GridPane.columnIndex="4">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </TextField>
+            <Label text="Código Diente:">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </GridPane>
+      <TabPane layoutX="8.0" layoutY="369.0" prefHeight="294.0" prefWidth="1171.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="369.0">
+        <tabs>
+          <Tab closable="false" text="Historial Clínico">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="220.0" prefWidth="962.0" AnchorPane.bottomAnchor="0.8000000000000114" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="782.0">
+                                 <children>
+                                    <Label prefHeight="74.0" prefWidth="140.0" text="Enfermedades Familiares " wrapText="true">
+                                       <HBox.margin>
+                                          <Insets left="6.0" />
+                                       </HBox.margin></Label>
+                                    <TextArea fx:id="txtEnfermedadesFamiliares" prefHeight="64.0" prefWidth="731.0" scrollLeft="1.0" wrapText="true" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="782.0">
+                                 <children>
+                                    <Label prefHeight="74.0" prefWidth="140.0" text="Antecedentes Patológicos" wrapText="true">
+                                       <HBox.margin>
+                                          <Insets left="6.0" />
+                                       </HBox.margin></Label>
+                                    <TextArea fx:id="txtAncetedentesPatologicos" prefHeight="64.0" prefWidth="730.0" scrollLeft="1.0" wrapText="true" />
+                                 </children>
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="782.0">
+                                 <children>
+                                    <Label prefHeight="74.0" prefWidth="140.0" text="Alergias" wrapText="true">
+                                       <HBox.margin>
+                                          <Insets left="6.0" />
+                                       </HBox.margin></Label>
+                                    <TextArea fx:id="txtAlergias" prefHeight="64.0" prefWidth="730.0" scrollLeft="1.0" wrapText="true" />
+                                 </children>
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab closable="false" text="Sintomas">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutY="13.0" prefHeight="201.0" prefWidth="478.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="13.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="478.0">
+                                 <children>
+                                    <Label text="Hábitos alimenticios" />
+                                    <TextArea fx:id="txtHabitosAlimenticios" prefHeight="66.0" prefWidth="474.0" wrapText="true" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label text="Tratamientos Anteriores" />
+                                    <TextArea fx:id="txtTratamientosAnteriores" prefHeight="66.0" prefWidth="474.0" wrapText="true" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label text="Medicación Actual" />
+                                    <TextArea fx:id="txtMedicacionActual" prefHeight="66.0" prefWidth="474.0" wrapText="true" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </GridPane>
+                        <GridPane layoutX="494.0" layoutY="14.0" prefHeight="236.0" prefWidth="662.0" styleClass="grid-pane">
+                          <columnConstraints>
+                            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="214.60003662109375" minWidth="10.0" prefWidth="167.4000244140625" />
+                            <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="385.6000366210938" minWidth="10.0" prefWidth="240.19997558593752" />
+                              <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" maxWidth="254.800048828125" minWidth="10.0" prefWidth="254.800048828125" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <CheckBox fx:id="ckSangradoExcesivo" mnemonicParsing="false" text="Sangrado Excesivo" />
+                              <CheckBox fx:id="ckVih" mnemonicParsing="false" text="VIH" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="ckProblemaSanguineo" mnemonicParsing="false" text="Problema Sanguíneo" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="ckEmbarazada" mnemonicParsing="false" text="Embarazada" GridPane.rowIndex="3" />
+                              <CheckBox fx:id="ckPastillasAnticonceptivas" mnemonicParsing="false" text="Pastillas Anticonceptivas" GridPane.columnIndex="1" />
+                              <CheckBox fx:id="ckDificultadAbrirBoca" mnemonicParsing="false" text="Dificultad Abrir Boca" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="ckRuidoAbrirCerrarBoca" mnemonicParsing="false" text="Ruido Abrir/Cerrar Boca" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="ckMuerdeUnhas" mnemonicParsing="false" text="Muerde Uñas" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <CheckBox fx:id="ckFuma" mnemonicParsing="false" text="Fuma" GridPane.rowIndex="4" />
+                              <CheckBox fx:id="ckConsumoAlimentosCitricos" mnemonicParsing="false" text="Consumo Alimentos Cítricos" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <HBox prefHeight="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label text="Altura Cm">
+                                       <padding>
+                                          <Insets right="20.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="txtAlturaCm" prefWidth="70.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <children>
+                                    <Label text="Temperatura">
+                                       <padding>
+                                          <Insets right="20.0" />
+                                       </padding></Label>
+                                    <TextField fx:id="txtTemperatura" prefWidth="70.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <children>
+                                    <Label text="Frecuencia Cardiaca">
+                                       <padding>
+                                          <Insets right="20.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="txtFrecuenciaCardiaca" prefWidth="70.0" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label text="Peso Kg">
+                                       <padding>
+                                          <Insets right="20.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="txtPesoKg" prefWidth="70.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab closable="false" text="Diagnóstico">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane prefHeight="220.0" prefWidth="962.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columnConstraints>
+                              <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="118.0" prefWidth="707.0">
+                                 <children>
+                                    <Label text="Diagnóstico" />
+                                    <TextArea fx:id="txtDiagnostico" prefHeight="78.0" prefWidth="703.0" scrollLeft="1.0" wrapText="true" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </GridPane.margin>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="118.0" prefWidth="708.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label text="Observaciones" />
+                                    <TextArea fx:id="txtObservaciones" prefHeight="84.0" prefWidth="703.0" scrollLeft="1.0" wrapText="true" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </GridPane.margin>
+                              </VBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="Tratamientos">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutY="3.0" prefHeight="258.0" prefWidth="486.0" text="Tratamientos Disponibles" AnchorPane.bottomAnchor="2.6000000000000227" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="3.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tvTratamientosDisponibles" layoutX="1.0" prefHeight="223.0" prefWidth="482.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="-8.600000000000023" AnchorPane.rightAnchor="-8.0" AnchorPane.topAnchor="-9.599999999999994">
+                                      <columns>
+                                          <TableColumn fx:id="col_Tratamiento_Id" prefWidth="150" text="Id_Tratamiento" />
+                                        <TableColumn fx:id="col_TratamientoNombre" prefWidth="180.0" text="Nombre" />
+                                        <TableColumn fx:id="col_Tratamiento_Tipo" prefWidth="170.0" text="Tipo Tratamiento" />
+                                          <TableColumn fx:id="col_Tratamiento_Precio" text="Precio" />
+                                      </columns>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutX="579.0" layoutY="3.0" prefHeight="250.0" prefWidth="591.0" text="Tratamientos Presupuestados" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="579.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="3.0">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="tvTratamientosPresupuestados" editable="true" prefHeight="225.0" prefWidth="416.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-9.600000000000023" AnchorPane.rightAnchor="-8.0" AnchorPane.topAnchor="-9.599999999999994">
+                                       <columns>
+                                          <TableColumn fx:id="col_TratamientoPresupuestado_Diente" editable="false" text="Diente" />
+                                          <TableColumn fx:id="col_TratamientoPresupuestado" editable="false" prefWidth="180.0" text="Nombre" />
+                                          <TableColumn prefWidth="120" text="Tipo Tratamiento" visible="false" />
+                                          <TableColumn fx:id="col_TratamientoPresupuestado_Observaciones" prefWidth="300.0" text="Observaciones" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <GridPane alignment="CENTER" layoutX="490.0" layoutY="45.0" prefHeight="158.0" prefWidth="90.0" AnchorPane.bottomAnchor="52.0" AnchorPane.topAnchor="45.0">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="103.8000244140625" minHeight="10.0" prefHeight="103.8000244140625" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="68.60001220703124" minHeight="8.999980163574222" prefHeight="12.999980163574222" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="106.60001983642579" minHeight="10.0" prefHeight="102.60001983642579" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button fx:id="btnAnadirTratamientoSeleccionado" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnAnadirTratamientoSeleccionado" prefHeight="35.0" prefWidth="78.0" text="&gt;&gt;" />
+                              <Button fx:id="btnQuitarTratamientoSeleccionado" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnQuitarTratamientoSeleccionado" text="&lt;&lt;" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="Recetas">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tvRecetas" layoutX="534.0" layoutY="7.0" prefHeight="250.0" prefWidth="637.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="534.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="7.0">
+                           <columns>
+                              <TableColumn fx:id="col_Id_Receta" prefWidth="150" text="Id_Receta" />
+                              <TableColumn fx:id="col_Medicamento" prefWidth="150" text="Medicamento" />
+                              <TableColumn fx:id="col_RecetaIndicaciones" prefWidth="300" text="Indicaciones" />
+                           </columns>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </TableView>
+                        <TitledPane animated="false" collapsible="false" prefHeight="108.0" prefWidth="404.0" text="Crear Recetas" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="72.0" prefWidth="401.0">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="77.0" prefWidth="394.0">
+                                       <children>
+                                          <Label text="Medicamento" />
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <TextField fx:id="txtRecetaMedicamento" editable="false" prefHeight="31.0" prefWidth="276.0" />
+                                                <Button fx:id="btnBuscarMedicamento" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnBuscarMedicamento" prefHeight="35.0" prefWidth="109.0" text="Buscar">
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </content>
+                        </TitledPane>
+                        <VBox alignment="CENTER_LEFT" layoutX="4.0" layoutY="102.0" prefHeight="142.0" prefWidth="402.0">
+                           <children>
+                              <Label text="Indicaciones" />
+                              <TextArea fx:id="txtRecetaIndicaciones" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+                           </children>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </VBox>
+                        <GridPane alignment="CENTER" layoutX="426.0" layoutY="29.0" prefHeight="167.0" prefWidth="102.0">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="103.8000244140625" minHeight="10.0" prefHeight="103.8000244140625" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="68.60001220703124" minHeight="8.999980163574222" prefHeight="12.999980163574222" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="106.60001983642579" minHeight="10.0" prefHeight="102.60001983642579" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button fx:id="btnAnadirReceta" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnAnadirReceta" text="&gt;&gt;" />
+                              <Button fx:id="btnQuitarReceta" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnQuitarReceta" text="&lt;&lt;" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="Ficheros">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tvFicheros" layoutX="220.0" layoutY="12.0" prefHeight="245.0" prefWidth="951.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="12.0">
+                           <columns>
+                              <TableColumn fx:id="col_Fichero_Id" prefWidth="110" text="Id_Fichero" visible="false" />
+                              <TableColumn fx:id="col_FicheroRuta" prefWidth="500" text="Ruta" />
+                              <TableColumn fx:id="col_ObjetoFichero" prefWidth="300" text="Fichero" />
+                           </columns>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </TableView>
+                        <Button fx:id="btnBorrarFichero" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="137.0" mnemonicParsing="false" onAction="#btnBorrarFichero" prefHeight="60.0" prefWidth="190.0" text="Borrar Fichero Seleccionado" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="btnBuscarFichero" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#btnBuscarFichero" prefHeight="60.0" prefWidth="190.0" text="Buscar y añadir Fichero" textAlignment="CENTER" wrapText="true" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <TitledPane animated="false" collapsible="false" layoutX="987.0" layoutY="14.0" prefHeight="344.0" prefWidth="192.0" text="Operaciones">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="199.0" mnemonicParsing="false" onAction="#btnGuardar" prefHeight="35.0" prefWidth="178.0" text="GUARDAR" />
+                  <Button fx:id="btnVerPresupuesto" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="261.0" mnemonicParsing="false" onAction="#btnVerPresupuesto" prefHeight="35.0" prefWidth="178.0" text="VER PRESUPUESTO" />
+                  <Button fx:id="btnEliminar" alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnEliminar" prefHeight="35.0" prefWidth="174.0" text="ELIMINAR" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

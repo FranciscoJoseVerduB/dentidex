@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="540.0" prefWidth="889.0" stylesheets="@css/DarkTheme.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controladoras.GruposSanguineoListadoController">
+   <children>
+      <TableView fx:id="tvDatos" layoutX="10.0" layoutY="82.0" prefHeight="257.0" prefWidth="598.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="82.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="82.0"> 
+       <columns>
+            <TableColumn fx:id="col_Codigo" prefWidth="110.0" text="Codigo" />
+            <TableColumn fx:id="col_PuedeDonarA" minWidth="0.0" prefWidth="200.0" text="Puede Donar A" />
+            <TableColumn fx:id="col_PuedeRecibirDe" minWidth="0.0" prefWidth="200.0" text="Puede Recibir De" /> 
+         </columns>
+      </TableView>
+      <Label layoutX="11.0" layoutY="9.0" prefHeight="60.0" prefWidth="870.0" styleClass="label-header" text="Listado de Grupos Sanguíneos" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="8.0" />
+      <TextField fx:id="txtBusqueda" layoutX="14.0" layoutY="384.0" prefHeight="35.0" prefWidth="554.0" promptText="Buscar por ..." AnchorPane.bottomAnchor="1.7999999999999972" />
+   </children>
+</AnchorPane>

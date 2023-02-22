@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.SearchableComboBox?>
+
+<AnchorPane prefHeight="649.0" prefWidth="976.0" stylesheets="@css/DarkTheme.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controladoras.MedicosShowController">
+   <children>
+      <SplitPane dividerPositions="0.18257853937168503" layoutX="-2.0" maxWidth="-Infinity" prefHeight="649.0" prefWidth="976.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <VBox maxWidth="-Infinity" prefWidth="178.0" SplitPane.resizableWithParent="false">
+               <children> 
+                      <TitledPane alignment="CENTER" text="MEDICOS">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0">
+                                 <children>
+                                    <ToolBar layoutY="1.0" orientation="VERTICAL" prefHeight="300.0" prefWidth="178.0" AnchorPane.bottomAnchor="-15.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-15.199999999999989" AnchorPane.topAnchor="-10.0">
+                                        <items>
+		                                    <Button fx:id="btnNuevo" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnNuevo" prefHeight="35.0" prefWidth="110.0" text="Nuevo" />
+		                                    <Button fx:id="btnModificar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnModificar" text="Modificar" />
+		                                    <Button fx:id="btnBorrar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnBorrar" prefHeight="35.0" prefWidth="110.0" text="Borrar" />
+		                                    <Button fx:id="btnGuardarCambios" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnGuardarCambios" text="Guardar Cambios" />
+		                                    <Button fx:id="btnCancelarCambios" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnCancelarCambios" text="Cancelar Cambios" />
+		                                    <Button fx:id="btnListar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnListar" text="Listar" />
+		                                 </items>
+                                    </ToolBar>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>  
+                        <TitledPane alignment="CENTER" text="BÚSQUEDA">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0">
+                                 <children>
+                                    <ToolBar layoutX="1.0" orientation="VERTICAL" prefHeight="155.0" prefWidth="178.0" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="-8.599999999999994" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-9.599999999999994">
+                                       <items>
+                                          <TextField fx:id="txtBusqueda" promptText="Buscar por ..." /> 
+                                       </items>
+                                       <padding>
+                                          <Insets top="20.0" />
+                                       </padding>
+                                    </ToolBar>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane> 
+               </children>
+            </VBox>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="648.0">
+               <children>
+                  <TableView fx:id="tvDatos" layoutX="6.0" layoutY="395.0" prefHeight="247.0" prefWidth="783.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="395.0">
+                   <columns>
+                        <TableColumn fx:id="col_IdMedico" prefWidth="150.0" text="Id_Medico" />
+                        <TableColumn fx:id="col_Nombre" prefWidth="110.0" text="Nombre" />
+                        <TableColumn fx:id="col_Nif" prefWidth="75.0" text="Nif" />
+                        <TableColumn fx:id="col_FechaNacimiento" prefWidth="150.0" text="F. Nacimiento" />
+                        <TableColumn fx:id="col_Email" prefWidth="110.0" text="Email" />
+                        <TableColumn fx:id="col_Telefono" prefWidth="110.0" text="Teléfono" />
+                        <TableColumn fx:id="col_NumeroColegiado" prefWidth="150.0" text="Nº Colegiado" />
+                        <TableColumn fx:id="col_Especialidad" prefWidth="150.0" text="Especialidad" /> 
+                        <TableColumn fx:id="col_Direccion" prefWidth="110.0" text="Dirección" />
+                        <TableColumn fx:id="col_Poblacion" prefWidth="110.0" text="Población" />
+                        <TableColumn fx:id="col_CP" prefWidth="75.0" text="CP" />
+                        <TableColumn fx:id="col_Provincia" prefWidth="110.0" text="Provincia" />
+                        <TableColumn fx:id="col_Pais" prefWidth="75.0" text="País" />
+                        <TableColumn fx:id="col_Usuario" prefWidth="110.0" text="Usuario" /> 
+                     </columns></TableView>
+                  <TabPane fx:id="tabPaneDatos" layoutX="1.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="394.0" prefWidth="791.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab closable="false" text="Sujeto">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="384.0">
+                                 <children>
+                                    <GridPane layoutX="6.0" layoutY="8.0" prefHeight="330.0" prefWidth="500.0" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="8.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="331.39996337890625" minWidth="10.0" prefWidth="156.8" />
+                                        <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="586.6000518798828" minWidth="10.0" prefWidth="338.4" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Nombre:" GridPane.rowIndex="2" />
+                                          <TextField fx:id="txtNombre" prefHeight="31.0" prefWidth="336.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <Label text="Apellidos:" GridPane.rowIndex="3" />
+                                          <TextField fx:id="txtApellidos" prefHeight="31.0" prefWidth="335.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Label text="NIF:" GridPane.rowIndex="4" />
+                                          <TextField fx:id="txtNif" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <TextField fx:id="txtEmail" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <Label text="Email:" GridPane.rowIndex="5" />
+                                          <Label text="Fecha Nacimiento:" GridPane.rowIndex="6" />
+                                          <DatePicker fx:id="dtpFechaNacimiento" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <Label text="Id:" />
+                                          <Label fx:id="lbId_Registro" text="0000" GridPane.columnIndex="1" />
+                                          <Label text="Fecha Creación:" GridPane.rowIndex="1" />
+                                          <Label fx:id="lbFechaCreacion" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Label text="Teléfono" GridPane.rowIndex="7" />
+                                          <TextField fx:id="txtTelefono" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                          <Label text="Nº Colegiado:" GridPane.rowIndex="8" />
+                                          <Label text="Especialidad" GridPane.rowIndex="9" />
+                                          <TextField fx:id="txtNumeroColegiado" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                          <SearchableComboBox fx:id="cbEspecialidad" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                       </children>
+                                    </GridPane>
+                                    <Button layoutX="618.0" layoutY="143.0" mnemonicParsing="false" onAction="#btnBuscarImagen" text="Buscar Imagen" />
+                                    <Label layoutX="506.0" layoutY="46.0" text="Fotografía:" />
+                                    <ImageView fx:id="imgFotografia" fitHeight="132.0" fitWidth="174.0" layoutX="604.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab closable="false" text="Direccion">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="384.0" prefWidth="633.0">
+                                 <children>
+                                    <GridPane layoutY="14.0" prefHeight="186.0" prefWidth="586.0" styleClass="gridPane" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="14.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="124.79995574951172" />
+                                          <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="767.2000244140625" minWidth="10.0" prefWidth="452.0000442504883" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="Código Postal:" GridPane.rowIndex="2" />
+                                          <Label text="Provincia:" GridPane.rowIndex="3" />
+                                          <Label text="Dirección:" />
+                                          <Label text="Población:" GridPane.rowIndex="1" />
+                                          <Label text="País:" GridPane.rowIndex="4" />
+                                          <TextField fx:id="txtCalle" prefWidth="450.0" GridPane.columnIndex="1" />
+                                          <TextField fx:id="txtPoblacion" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField fx:id="txtCodigoPostal" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField fx:id="txtProvincia" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <TextField fx:id="txtPais" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                    </GridPane>
+                                 </children>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab closable="false" text="Usuario">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="384.0" prefWidth="633.0">
+                                 <children>
+                                    <GridPane layoutX="7.0" layoutY="22.0" prefHeight="94.0" prefWidth="586.0" styleClass="gridPane" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="22.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="108.8000244140625" />
+                                          <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="767.2000244140625" minWidth="10.0" prefWidth="467.99997558593753" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="Código" />
+                                          <Label text="Contrasenia:" GridPane.rowIndex="1" />
+                                          <TextField fx:id="txtUsuarioCodigo" GridPane.columnIndex="1" />
+                                          <TextField fx:id="txtUsuarioContrasenia" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                    </GridPane>
+                                 </children>
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

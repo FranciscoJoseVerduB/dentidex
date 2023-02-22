@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1192.0" stylesheets="@css/DarkTheme.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controladoras.FacturasShowController">
+   <children>
+      <TitledPane animated="false" collapsible="false" prefHeight="233.0" prefWidth="962.0" text="Datos de la Cabecera de la Factura" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="210.0" AnchorPane.topAnchor="0.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="181.0" prefWidth="570.0">
+               <children>
+                  <GridPane layoutX="9.6" layoutY="9.6" prefHeight="217.0" prefWidth="943.0" styleClass="grid-pane" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="782.0">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="58.0">
+                                 <children>
+                                    <Label text="Serie" />
+                                    <TextField fx:id="txtSerie" prefHeight="26.0" prefWidth="50.0" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="79.0">
+                                 <children>
+                                    <Label text="Numero" />
+                                    <TextField fx:id="txtNumero" editable="false" prefHeight="26.0" prefWidth="249.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="64.0" prefWidth="89.0">
+                                 <children>
+                                    <Label text="F. Emisión" />
+                                    <TextField fx:id="txtFecha" editable="false" prefHeight="26.0" prefWidth="249.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="66.0" prefWidth="94.0">
+                                 <children>
+                                    <Label text="Id Médico" />
+                                    <TextField fx:id="txtId_Medico" editable="false" prefHeight="26.0" prefWidth="249.0">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="90.0" right="5.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="318.0">
+                                 <children>
+                                    <Label text="Nombre Médico" />
+                                    <TextField fx:id="txtMedicoNombre" editable="false" prefHeight="26.0" prefWidth="322.0">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="782.0" GridPane.rowIndex="1">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Id Paciente" />
+                                    <TextField fx:id="txtId_Paciente" editable="false" prefHeight="26.0" prefWidth="249.0" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="319.0">
+                                 <children>
+                                    <Label text="Nombre Paciente" />
+                                    <TextField fx:id="txtPacienteNombre" editable="false" prefHeight="26.0" prefWidth="249.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="117.0">
+                                 <children>
+                                    <Label text="Provincia" />
+                                    <TextField fx:id="txtPacienteProvincia" editable="false" prefHeight="26.0" prefWidth="117.0" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Poblacion" />
+                                    <TextField fx:id="txtPacientePoblacion" editable="false" prefHeight="26.0" prefWidth="95.0">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="NIF" />
+                                    <TextField fx:id="txtPacienteNif" editable="false" prefHeight="26.0" prefWidth="249.0">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="923.0" GridPane.rowIndex="2">
+                           <children>
+                              <Label prefHeight="64.0" prefWidth="116.0" text="Observaciones" wrapText="true" />
+                              <TextArea fx:id="txtObservaciones" prefHeight="38.0" prefWidth="634.0" scrollLeft="1.0" wrapText="true">
+                                 <padding>
+                                    <Insets bottom="5.0" />
+                                 </padding>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="986.0" layoutY="20.0" prefHeight="233.0" prefWidth="192.0" text="Operaciones" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="252.0" prefWidth="190.0">
+               <children>
+                  <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="95.0" mnemonicParsing="false" onAction="#btnGuardar" prefHeight="35.0" prefWidth="165.0" text="GUARDAR" />
+                  <Button fx:id="btnVerFactura" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="155.0" mnemonicParsing="false" onAction="#btnVerFactura" prefHeight="35.0" prefWidth="170.0" text="VER FACTURA" />
+                  <Button fx:id="btnEliminar" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnEliminar" prefHeight="35.0" prefWidth="166.0" text="ELIMINAR" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="10.0" layoutY="248.0" prefHeight="291.0" prefWidth="962.0" text="Detalle de la Factura" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="240.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tvFacturaDetalle" layoutX="14.6" layoutY="8.6" prefHeight="306.0" prefWidth="948.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="-18.0" AnchorPane.topAnchor="-10.0">
+                    <columns>
+                        <TableColumn fx:id="col_Id_FacturaDetalle" prefWidth="170.0" text="Id_FacturaDetalle" />
+                        <TableColumn fx:id="col_Diente" prefWidth="80.0" text="Diente" />
+                        <TableColumn fx:id="col_TratamientoNombre" prefWidth="140.0" text="Tratamiento" />
+                        <TableColumn fx:id="col_TratamientoTipo" prefWidth="140.0" text="Tipo" />
+                        <TableColumn fx:id="col_Tratamiento_Precio" prefWidth="100.0" text="Precio" />
+                        <TableColumn fx:id="col_Tratamiento_Cobrado" prefWidth="100.0" text="Cobrado" />
+                      <TableColumn fx:id="col_Observaciones" prefWidth="400.0" text="Observaciones" />
+                    </columns>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" layoutX="9.0" layoutY="545.0" prefHeight="137.0" prefWidth="962.0" text="Pie de la Factura" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="535.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="86.0" prefWidth="671.0">
+               <children>
+                  <GridPane layoutX="18.6" prefHeight="90.0" prefWidth="953.0" styleClass="grid-pane" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="-2.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="782.0">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="114.0" prefWidth="242.0">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="202.0">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" text="Dto. Cliente (%)" wrapText="true">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="txtPorcentajeDescuento" prefHeight="26.0" prefWidth="50.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="202.0">
+                                       <children>
+                                          <Label text="\% IVA">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="txtPorcentajeIva" prefHeight="26.0" prefWidth="50.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="114.0" prefWidth="317.0">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="202.0">
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Base Imponible" wrapText="true">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="txtBaseImponible" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="102.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="202.0">
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Total Factura">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="txtTotalFactura" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="106.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>
