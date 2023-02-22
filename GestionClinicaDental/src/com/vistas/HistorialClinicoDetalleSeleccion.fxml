@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="651.0" prefWidth="880.0" stylesheets="@css/DarkTheme.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controladoras.HistorialClinicoDetalleSeleccionController">
+   <children>
+      <ButtonBar layoutX="176.0" layoutY="233.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <buttons>
+            <Button mnemonicParsing="false" onAction="#btnOk" text="OK" />
+            <Button cancelButton="true" mnemonicParsing="false" onAction="#btnCancelar" text="Cancelar" />
+         </buttons>
+      </ButtonBar>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="8.0" prefHeight="60.0" prefWidth="854.0" styleClass="label-header" text="Visitas pendientes de facturar" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tvDatos" layoutX="14.0" layoutY="78.0" prefHeight="502.0" prefWidth="854.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="70.60000000000002" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.600000000000023" AnchorPane.topAnchor="78.0">
+        <columns>
+         	   <TableColumn fx:id="col_IdHistorialClinicoDetalle" prefWidth="150.0" text="IdHistorialClinicoDetalle" />
+	           <TableColumn fx:id="col_IdPaciente" prefWidth="150.0" text="IdPaciente" />
+	           <TableColumn fx:id="col_Paciente" prefWidth="110.0" text="Paciente" />
+	           <TableColumn fx:id="col_IdMedico" prefWidth="110.0" text="IdMedico" />
+	           <TableColumn fx:id="col_Medico" prefWidth="110.0" text="Medico" />
+	           <TableColumn fx:id="col_FechaVisita" prefWidth="150.0" text="Fecha Visita" />
+	           <TableColumn fx:id="col_HoraCita" prefWidth="150.0" text="Hora Cita" />
+	           <TableColumn fx:id="col_Telefono" prefWidth="110.0" text="Telefono" />
+	           <TableColumn fx:id="col_Poblacion" prefWidth="110.0" text="Poblacion" />
+	           <TableColumn fx:id="col_Provincia" prefWidth="110.0" text="Provincia" />
+	           <TableColumn fx:id="col_ObservacionesVisita" prefWidth="500" text="Observaciones Cita" />
+	           <TableColumn fx:id="col_NumeroTratamientos" prefWidth="500" text="Numero Tratamientos" />
+           </columns>
+      </TableView>
+      <TextField fx:id="txtBusqueda" layoutX="14.0" layoutY="593.0" prefHeight="35.0" prefWidth="554.0" promptText="Buscar por ..." AnchorPane.bottomAnchor="22.799999999999997" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="651.0" prefWidth="880.0" stylesheets="@css/DarkTheme.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controladoras.FacturasSeleccionController">
+   <children>
+      <ButtonBar layoutX="615.0" layoutY="599.0" AnchorPane.bottomAnchor="20.00000000000002">
+         <buttons>
+            <Button mnemonicParsing="false" onAction="#btnOk" text="OK" />
+            <Button cancelButton="true" mnemonicParsing="false" onAction="#btnCancelar" text="Cancelar" />
+         </buttons>
+      </ButtonBar>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="13.0" prefHeight="60.0" prefWidth="860.0" styleClass="label-header" text="Selección de Facturas" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="8.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tvDatos" layoutX="14.0" layoutY="78.0" prefHeight="502.0" prefWidth="854.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="70.60000000000002" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.600000000000023" AnchorPane.topAnchor="78.0">
+        <columns>
+         	   <TableColumn fx:id="col_IdFactura" prefWidth="110.0" text="IdFactura" />
+         	   <TableColumn fx:id="col_Serie" prefWidth="75.0" text="Serie" />
+         	   <TableColumn fx:id="col_Numero" prefWidth="75.0" text="Numero" />
+         	   <TableColumn fx:id="col_FechaFactura" prefWidth="150.0" text="F. Factura" />
+	           <TableColumn fx:id="col_IdPaciente" prefWidth="110.0" text="IdPaciente" />
+	           <TableColumn fx:id="col_Paciente" prefWidth="110.0" text="Paciente" />
+	           <TableColumn fx:id="col_IdMedico" prefWidth="110.0" text="IdMedico" />
+	           <TableColumn fx:id="col_Medico" prefWidth="110.0" text="Medico" />  
+	           <TableColumn fx:id="col_BaseImponible" prefWidth="150" text="Base Imponible" />
+	           <TableColumn fx:id="col_Importe" prefWidth="80" text="Importe" />
+	           <TableColumn fx:id="col_Cobrado" prefWidth="80" text="Cobrado" />
+	           <TableColumn fx:id="col_PorcentajeIva" prefWidth="50" text="IVA" />
+	           <TableColumn fx:id="col_PorcentajeDescuento" prefWidth="50" text="Dto." /> 
+	           <TableColumn fx:id="col_Telefono" prefWidth="110.0" text="Telefono" />
+	           <TableColumn fx:id="col_Poblacion" prefWidth="110.0" text="Poblacion" />
+	           <TableColumn fx:id="col_Provincia" prefWidth="110.0" text="Provincia" />
+	           <TableColumn fx:id="col_ObservacionesFactura" prefWidth="400" text="Observaciones Factura" />
+           </columns>
+      </TableView>
+      <TextField fx:id="txtBusqueda" layoutX="14.0" layoutY="599.0" prefHeight="35.0" prefWidth="554.0" promptText="Buscar por ..." AnchorPane.bottomAnchor="20.00000000000002" />
+   </children>
+</AnchorPane>

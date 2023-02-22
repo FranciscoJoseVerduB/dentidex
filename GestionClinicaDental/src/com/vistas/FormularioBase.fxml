@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane prefHeight="750.0" prefWidth="1000.0" stylesheets="@css/DarkTheme.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controladoras.FormularioBaseController">
+   <top>
+      <BorderPane prefHeight="98.0" prefWidth="1000.0" BorderPane.alignment="CENTER_LEFT">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                  <Menu mnemonicParsing="false" text="Pacientes">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#gestionarPacientes" text="Gestionar Pacientes" />
+                        <MenuItem mnemonicParsing="false" onAction="#gestionarHistorialClinico" text="Historial Clínico" />
+                        <MenuItem mnemonicParsing="false" onAction="#mostrarListaGruposSanguineo" text="Mostrar Grupos Sanguineos" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Médicos">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#gestionarEspecialidades" text="Gestionar Especialidades" />
+                        <MenuItem mnemonicParsing="false" onAction="#gestionarMedicos" text="Gestionar Médicos" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Citas">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#gestionarCitas" text="Gestionar Citas" />
+                        <MenuItem mnemonicParsing="false" onAction="#reservarCitas" text="Reservar Citas" />
+                        <MenuItem mnemonicParsing="false" onAction="#citasPendientesTratar" text="Citas Pendientes Tratar" />
+                     </items>
+                  </Menu>
+                   <Menu mnemonicParsing="false" text="Tratamientos">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#gestionarTratamientos" text="Gestionar Tratamientos" />
+                        <MenuItem mnemonicParsing="false" onAction="#gestionarTiposTratamiento" text="Gestionar Tipos de Tratamiento" />
+                        <MenuItem mnemonicParsing="false" onAction="#mostrarListaDientes" text="Mostrar Lista Dientes" />
+                     </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Almacén">
+                	<items>
+                		<MenuItem mnemonicParsing="false" onAction="#gestionarProveedores" text="Gestionar Proveedores" />
+	                	<MenuItem mnemonicParsing="false" onAction="#gestionarArticulos" text="Gestionar Articulos" />
+	                	<MenuItem mnemonicParsing="false" onAction="#gestionarFamiliasArticulo" text="Gestionar Familias de Articulo" />
+                        <MenuItem mnemonicParsing="false" onAction="#gestionarMedicamentos" text="Gestionar Medicamentos" /> 
+                     </items> 
+                </Menu> 
+				<Menu mnemonicParsing="false" text="Facturas">
+                	<items>
+                		<MenuItem mnemonicParsing="false" onAction="#gestionarFacturas" text="Gestionar Facturas" />
+                		<MenuItem mnemonicParsing="false" onAction="#gestionarVisitasPendientesFacturar" text="Visitas Pendientes de Facturar" />    
+                     </items> 
+                </Menu>
+                <Menu mnemonicParsing="false" text="Reportes">
+                  <items>
+                        <Menu mnemonicParsing="false" text="Pacientes">
+                           <items>
+                           	  <MenuItem mnemonicParsing="false" onAction="#informePacientes" text="Pacientes" />
+                              <MenuItem mnemonicParsing="false" onAction="#informePacientesPorProvincia" text="Por Provincia" />
+                              <MenuItem mnemonicParsing="false" onAction="#informePacientePorTipoSanguineo" text="Por Tipo Sanguíneo" />
+                              <MenuItem mnemonicParsing="false" onAction="#informePacientePorGenero" text="Por Género" /> 
+                              <MenuItem mnemonicParsing="false" onAction="#informePacientesDeudores" text="Deudores" />
+                              <MenuItem mnemonicParsing="false" onAction="#informePacientesCitasPorMedico" text="Por Cita Médica" />
+                           </items>
+                        </Menu>
+                        
+                        <Menu mnemonicParsing="false" text="Médicos">
+                           <items>
+                           	  <MenuItem mnemonicParsing="false" onAction="#informeMedicos" text="Médicos" /> 
+                              <MenuItem mnemonicParsing="false" onAction="#informeMedicosPorEspecialidad" text="Por Especialidad" />
+                              <MenuItem mnemonicParsing="false" onAction="#informeMedicosPorPoblacion" text="Por Población" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Recetas Médicas">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#informeRecetasMedicasPorPaciente" text="Por Paciente" />
+                              <MenuItem mnemonicParsing="false" onAction="#informeRecetasMedicasPorMedico" text="Por Médico" />
+                           </items>
+                        </Menu> 
+                        <Menu mnemonicParsing="false" text="Tratamientos">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#informeTratamientos" text="Tratamientos" />
+                              <MenuItem mnemonicParsing="false" onAction="#informeTratamientosTipoTratamiento" text="Tipos de Tratamiento" />
+                           </items>
+                        </Menu> 
+                        <MenuItem mnemonicParsing="false" onAction="#informeMedicamentos" text="Medicamentos" />
+                         <Menu mnemonicParsing="false" text="Facturas">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#informeFacturas" text="Facturas" />
+                           </items>
+                        </Menu> 
+                        <Menu mnemonicParsing="false" text="Historiales Clínicos">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#informeHistorialesClinicos" text="Historiales Clínicos" />
+                           </items>
+                        </Menu> 
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Configuración">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="En Construcción" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Ayuda">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#menuAyuda" text="Ayuda" />
+                        <MenuItem mnemonicParsing="false" onAction="#menuCerrarAplicacion" text="Salir" />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <HBox id="menuIntermedio" alignment="CENTER_LEFT" prefHeight="63.0" BorderPane.alignment="CENTER_LEFT">
+               <children>
+               	  <Button mnemonicParsing="false" onAction="#btnFormularioInicio" text="Inicio"/>
+                  <Button mnemonicParsing="false" onAction="#btnPacientes" text="Pacientes"/>
+                  <Button mnemonicParsing="false" onAction="#btnReservarCita" text="Reservar Cita" />
+                  <Button mnemonicParsing="false" onAction="#btnTratamientos" text="Tratamientos" />
+                  <Button mnemonicParsing="false" onAction="#btnMedicos" text="Medicos" />
+                  <Button mnemonicParsing="false" onAction="#btnArticulos" text="Articulos" />
+                  <Button mnemonicParsing="false" onAction="#btnHistorialClinico" text="Historial Clinico" /> 
+                  <Button mnemonicParsing="false" onAction="#btnCitasPendientes" text="Citas Pendientes" />
+                  <Button mnemonicParsing="false" onAction="#btnVisitasPendientes" text="Visitas Pendientes Facturar" />
+                  <Button mnemonicParsing="false" onAction="#btnGestionarFacturas" text="Facturas" />
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </HBox>
+         </center>
+      </BorderPane>
+   </top>
+</BorderPane>

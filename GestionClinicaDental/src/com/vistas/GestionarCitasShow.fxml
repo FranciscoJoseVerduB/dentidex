@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="649.0" prefWidth="1058.0" stylesheets="@css/DarkTheme.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controladoras.GestionarCitasShowController">
+   <children>
+      <SplitPane dividerPositions="0.2" layoutX="-2.0" maxWidth="-Infinity" prefHeight="649.0" prefWidth="976.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <VBox maxWidth="-Infinity" SplitPane.resizableWithParent="false">
+               <children>
+                <TitledPane alignment="CENTER" text="OPCIONES">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0">
+                           <children>
+                              <ToolBar layoutY="1.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0">
+                                 <items>
+                                    <Button fx:id="btnAnularCita" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnAnularCita" prefHeight="35.0" prefWidth="132.0" text="Anular Cita" />
+                                    <Button fx:id="btnCambiarAPendiente" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnCambiarAPendiente" text="Cambiar a Pendiente" />
+                                    <Button fx:id="btnReprogramarCita" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnReprogramarCita" prefHeight="35.0" prefWidth="186.0" text="Reprogramar Cita" />
+                                    <Button fx:id="btnEliminarCita" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnEliminarCita" text="Eliminar Cita" />
+                                 </items>
+                              </ToolBar>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                  <TitledPane alignment="CENTER" text="BÚSQUEDA">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="380.0" prefWidth="174.0">
+                           <children>
+                              <ToolBar layoutX="1.0" layoutY="3.0" orientation="VERTICAL" prefHeight="376.0" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="-10.0">
+                                 <items>
+                                    <TextField fx:id="txtBusqueda" promptText="Buscar por ...">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets></TextField>
+                                    <Separator prefHeight="3.0" prefWidth="158.0">
+                                       <padding>
+                                          <Insets bottom="20.0" top="20.0" />
+                                       </padding>
+                                    </Separator>
+                                    <DatePicker fx:id="dtpFechaCitaDesde" editable="false" promptText="Fecha Cita Desde" showWeekNumbers="true" />
+                                    <DatePicker fx:id="dtpFechaCitaHasta" editable="false" promptText="Fecha Cita Hasta" showWeekNumbers="true" />
+                                 </items>
+                                 <padding>
+                                    <Insets top="20.0" />
+                                 </padding>
+                              </ToolBar>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+               </children>
+            </VBox>
+          <AnchorPane minHeight="0.0" minWidth="0.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <TitledPane alignment="CENTER" animated="false" collapsible="false" contentDisplay="BOTTOM" graphicTextGap="12.0" layoutX="-1.0" layoutY="328.0" prefHeight="322.0" prefWidth="795.0" styleClass="label-title-panel" text="Datos de la Cita y del Paciente" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <content>
+                        <GridPane alignment="CENTER_LEFT" prefHeight="102.0" styleClass="grid-pane">
+                           <columnConstraints>
+                              <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="NEVER" maxWidth="331.39996337890625" minWidth="10.0" prefWidth="173.6" />
+                              <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="ALWAYS" maxWidth="636.8000244140624" minWidth="10.0" prefWidth="618.2" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Cita Nº: " />
+                              <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="643.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <TextField fx:id="lbId_Cita" editable="false" prefHeight="34.0" prefWidth="86.0">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label text="Fecha Cita:">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="lbFechaCita" editable="false" prefHeight="34.0" prefWidth="91.0" text="10/20/2022" />
+                                    <Label text="Hora Cita:">
+                                       <HBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="lbHoraCita" editable="false" prefHeight="34.0" prefWidth="62.0" text="20:20" />
+                                 </children>
+                              </HBox>
+                              <Label text="Código Paciente:" GridPane.rowIndex="1" />
+                              <Label text="Código Médico:" GridPane.rowIndex="2" />
+                              <Label text="Dirección:" GridPane.rowIndex="3" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="652.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
+                                 <children>
+                                    <TextField fx:id="lbDireccionCalle" editable="false" prefHeight="34.0" prefWidth="331.0" />
+                                    <Label text="Municipio:">
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="lbDireccionMunicipio" editable="false" prefHeight="34.0" prefWidth="155.0" />
+                                 </children>
+                              </HBox>
+                              <Label text="Teléfono:" GridPane.rowIndex="4" />
+                              <TextField fx:id="lbTelefono" editable="false" prefHeight="34.0" prefWidth="143.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="406.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <TextField fx:id="txt_IdMedico" editable="false" prefHeight="34.0" prefWidth="86.0" />
+                                    <Label text=" -- ">
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="txtMedicoNombre" editable="false" prefHeight="34.0" prefWidth="200.0">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="406.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <TextField fx:id="txt_IdPaciente" editable="false" prefHeight="34.0" prefWidth="86.0" />
+                                    <Label text=" -- ">
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="txtPacienteNombre" editable="false" prefHeight="34.0" prefWidth="200.0">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                     </content>
+                  </TitledPane>
+                  <TabPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="322.0" prefWidth="790.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="326.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab closable="false" onSelectionChanged="#tabCitasPendientes" text="Citas Pendientes">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0">
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <TableView fx:id="tvCitasPendientes" prefHeight="302.0" prefWidth="790.0" AnchorPane.bottomAnchor="-3.3999999999999773" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-9.0">
+                                       <columns>
+                                          <TableColumn fx:id="colIdCita_Pendiente" prefWidth="110.0" text="IdCita" />
+                                          <TableColumn fx:id="colIdPaciente_Pendiente" prefWidth="110.0" text="IdPaciente" />
+                                          <TableColumn fx:id="colIdMedico_Pendiente" prefWidth="110.0" text="IdMedico" />
+                                          <TableColumn fx:id="colFechaCita_Pendiente" prefWidth="110.0" text="F. Cita" />
+                                          <TableColumn fx:id="colHoraCita_Pendiente" prefWidth="110.0" text="H. Cita" />
+                                          <TableColumn fx:id="colObservacionesCita_Pendiente" prefWidth="500" text="Observaciones Cita" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab closable="false" onSelectionChanged="#tabCitasAnuladas" text="Citas Anuladas">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="384.0" prefWidth="633.0">
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <TableView fx:id="tvCitasAnuladas" layoutY="1.0" prefHeight="305.0" prefWidth="791.0" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-9.0">
+                                       <columns> 
+                                          <TableColumn fx:id="colIdCita_Anulada" prefWidth="110.0" text="IdCita" />
+                                          <TableColumn fx:id="colIdPaciente_Anulada" prefWidth="110.0" text="IdPaciente" />
+                                          <TableColumn fx:id="colIdMedico_Anulada" prefWidth="110.0" text="IdMedico" />
+                                          <TableColumn fx:id="colFechaCita_Anulada" prefWidth="110.0" text="F. Cita" />
+                                          <TableColumn fx:id="colHoraCita_Anulada" prefWidth="110.0" text="H. Cita" />
+                                          <TableColumn fx:id="colObservacionesCita_Anulada" prefWidth="400" text="Observaciones Cita" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab closable="false" onSelectionChanged="#tabCitasExpiradas" text="Citas Expiradas">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="384.0" prefWidth="633.0">
+                                 <padding>
+                                    <Insets top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <TableView fx:id="tvCitasExpiradas" prefHeight="303.0" prefWidth="790.0" AnchorPane.bottomAnchor="-4.199999999999989" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-9.0">
+                                       <columns>
+                                          <TableColumn fx:id="colIdCita_Expirada" prefWidth="110.0" text="IdCita" />
+                                          <TableColumn fx:id="colIdPaciente_Expirada" prefWidth="110.0" text="IdPaciente" />
+                                          <TableColumn fx:id="colIdMedico_Expirada" prefWidth="110.0" text="IdMedico" />
+                                          <TableColumn fx:id="colFechaCita_Expirada" prefWidth="110.0" text="F. Cita" />
+                                          <TableColumn fx:id="colHoraCita_Expirada" prefWidth="110.0" text="H. Cita" />
+                                          <TableColumn fx:id="colObservacionesCita_Expirada" prefWidth="400" text="Observaciones Cita" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
