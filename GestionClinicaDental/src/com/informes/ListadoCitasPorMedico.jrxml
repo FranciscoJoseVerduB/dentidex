@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ListadoPacientes" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a1f690a3-5977-4467-85f8-6b0bcd5b7210">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JDBC_Postgre_DataAdapter"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<style name="Title" forecolor="#407D4C" fontName="Arial" fontSize="26" isBold="true"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="LogoEmpresa" class="javafx.scene.image.Image" isForPrompting="false"/>
+	<parameter name="SUBREPORTE" class="net.sf.jasperreports.engine.JasperReport"/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM citasvista]]>
+	</queryString>
+	<field name="id_cita" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_cita"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_cita"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="citasvista"/>
+	</field>
+	<field name="citafecha" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="citafecha"/>
+		<property name="com.jaspersoft.studio.field.label" value="citafecha"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="citasvista"/>
+	</field>
+	<field name="citahora" class="java.sql.Time">
+		<property name="com.jaspersoft.studio.field.name" value="citahora"/>
+		<property name="com.jaspersoft.studio.field.label" value="citahora"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="citasvista"/>
+	</field>
+	<field name="citaobservaciones" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="citaobservaciones"/>
+		<property name="com.jaspersoft.studio.field.label" value="citaobservaciones"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="citasvista"/>
+	</field>
+	<field name="citaestado" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="citaestado"/>
+		<property name="com.jaspersoft.studio.field.label" value="citaestado"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="citasvista"/>
+	</field>
+	<field name="id_paciente" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_paciente"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_paciente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="citasvista"/>
+	</field>
+	<field name="pacientenombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pacientenombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="pacientenombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="citasvista"/>
+	</field>
+	<field name="pacientenif" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pacientenif"/>
+		<property name="com.jaspersoft.studio.field.label" value="pacientenif"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="citasvista"/>
+	</field>
+	<field name="pacientetelefono" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pacientetelefono"/>
+		<property name="com.jaspersoft.studio.field.label" value="pacientetelefono"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="citasvista"/>
+	</field>
+	<field name="pacientefoto" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pacientefoto"/>
+		<property name="com.jaspersoft.studio.field.label" value="pacientefoto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="citasvista"/>
+	</field>
+	<field name="pacientegenero" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pacientegenero"/>
+		<property name="com.jaspersoft.studio.field.label" value="pacientegenero"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="citasvista"/>
+	</field>
+	<field name="id_medico" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_medico"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_medico"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="citasvista"/>
+	</field>
+	<field name="mediconombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="mediconombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="mediconombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="citasvista"/>
+	</field>
+	<field name="mediconif" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="mediconif"/>
+		<property name="com.jaspersoft.studio.field.label" value="mediconif"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="citasvista"/>
+	</field>
+	<field name="medicotelefono" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="medicotelefono"/>
+		<property name="com.jaspersoft.studio.field.label" value="medicotelefono"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="citasvista"/>
+	</field>
+	<field name="medicoespecialidad" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="medicoespecialidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="medicoespecialidad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="citasvista"/>
+	</field>
+	<sortField name="mediconombre"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="36">
+			<staticText>
+				<reportElement mode="Opaque" x="3" y="0" width="548" height="30" backcolor="#CAD8ED" uuid="9edad95f-c999-4ca3-9380-0d15693e8585"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LISTADO DE MÉDICOS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="50">
+			<textField>
+				<reportElement x="5" y="10" width="543" height="30" uuid="59c727d3-754d-4d54-a40e-f3ff68488263"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Médico: " + $F{mediconombre} + " (" + $F{id_medico} + ")"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="128" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="5" y="1" width="548" height="110" uuid="2c9b4eec-220b-46fa-8865-b048ea294e01"/>
+				<box padding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement mode="Opaque" x="1" y="0" width="544" height="20" backcolor="#C2C2C2" uuid="8e0241cc-0f76-4851-be8c-84cbe0835910"/>
+					<box padding="1">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[CITA]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement key="" x="4" y="22" width="196" height="14" uuid="acf198f4-4781-4f26-be19-751d48b749c9">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dc40cbd4-063b-4943-a3bd-87cea38828fb"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Id_Cita: " + $F{id_cita}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="" x="4" y="51" width="196" height="14" uuid="c5168368-e243-4847-9381-0b97283476fc"/>
+					<textFieldExpression><![CDATA["Fecha Cita: " + $F{citafecha}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="" x="4" y="66" width="196" height="14" uuid="9538353a-c472-4a13-8ad5-e0199a8ccd1b">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Hora Cita: " + $F{citahora}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="" x="231" y="51" width="188" height="14" uuid="8051169f-50f8-4a37-858b-659e7ff00048">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Teléfono Paciente: " + $F{pacientetelefono}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+					<reportElement key="" x="4" y="94" width="196" height="14" uuid="a6d8d66f-ef3a-49f4-9aed-27392994699b">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Observaciones Cita: " + $F{citaobservaciones}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="" x="231" y="22" width="188" height="14" uuid="e77dfd76-ee4f-4dd8-8f6e-733b53269a09">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Paciente: " + $F{pacientenombre}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="" x="231" y="36" width="188" height="14" uuid="3bb7a16e-3854-4a19-8bbd-29ff8db81ea7">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Paciente NIF: " + $F{pacientenif}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="" x="4" y="80" width="196" height="14" uuid="071fb381-1e02-4122-ba5a-6f8ae3df1860">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Estado Cita: " + $F{citaestado}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="" x="4" y="38" width="196" height="14" uuid="7976960a-ff67-482b-8f7d-741a925b2023">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dc40cbd4-063b-4943-a3bd-87cea38828fb"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Id_Paciente: " + $F{id_paciente}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="" x="231" y="66" width="188" height="14" uuid="0e354687-7410-4739-9f9f-08e02bef034a">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Género Paciente: " + $F{pacientegenero}]]></textFieldExpression>
+				</textField>
+				<image scaleImage="FillFrame" isLazy="true" onErrorType="Blank">
+					<reportElement x="436" y="21" width="110" height="88" uuid="20033deb-9081-4841-a55b-6972e1de92e8">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<imageExpression><![CDATA[$F{pacientefoto}]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="deb23d85-47bb-4de6-978e-113ff117188c"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="c6ce76ba-6e11-41e2-9415-72dc2eff001b"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="5a79d2a0-bcde-4ad5-adf0-c4eb2066f6dd"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

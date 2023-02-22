@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ListadoPacientes" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a1f690a3-5977-4467-85f8-6b0bcd5b7210">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JDBC_Postgre_DataAdapter"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<style name="Title" forecolor="#407D4C" fontName="Arial" fontSize="26" isBold="true"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#0088FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#E6F3FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#BFE1FF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="DataSet" uuid="7f6ef054-3ee4-49c9-847e-6c4db9cd95b6">
+		<property name="com.jaspersoft.studio.data.sql.tables">
+			<![CDATA[dHJhdGFtaWVudG9zdmlzdGEgLDE1LDE1LDc0ZWJiZDhkLTNmNjUtNDFlZC1hODg5LTIzYjgxMjEw
+MzAyODs=]]>
+		</property>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JDBC_Postgre_DataAdapter"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT *
+FROM tratamientosvista]]>
+		</queryString>
+		<field name="id_tratamiento" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="id_tratamiento"/>
+			<property name="com.jaspersoft.studio.field.label" value="id_tratamiento"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="tratamientosvista"/>
+		</field>
+		<field name="tratamiento" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="tratamiento"/>
+			<property name="com.jaspersoft.studio.field.label" value="tratamiento"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="tratamientosvista"/>
+		</field>
+		<field name="precio" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.name" value="precio"/>
+			<property name="com.jaspersoft.studio.field.label" value="precio"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="tratamientosvista"/>
+		</field>
+		<field name="id_tipotratamiento" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="id_tipotratamiento"/>
+			<property name="com.jaspersoft.studio.field.label" value="id_tipotratamiento"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="tratamientosvista"/>
+		</field>
+		<field name="tipotratamiento" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="tipotratamiento"/>
+			<property name="com.jaspersoft.studio.field.label" value="tipotratamiento"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="tratamientosvista"/>
+		</field>
+	</subDataset>
+	<subDataset name="Empty Dataset1" uuid="1f9c1bee-4aa0-4866-88b1-7c55507e3386"/>
+	<subDataset name="DatasetArticulos" uuid="26dc9f1e-44c5-4e37-9743-ae2bb9126fab">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JDBC_Postgre_DataAdapter"/>
+		<queryString language="SQL">
+			<![CDATA[select * 
+	from articulosvista]]>
+		</queryString>
+		<field name="id_articulo" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="id_articulo"/>
+			<property name="com.jaspersoft.studio.field.label" value="id_articulo"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+		</field>
+		<field name="articulocodigo" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="articulocodigo"/>
+			<property name="com.jaspersoft.studio.field.label" value="articulocodigo"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+		</field>
+		<field name="articulonombre" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="articulonombre"/>
+			<property name="com.jaspersoft.studio.field.label" value="articulonombre"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+		</field>
+		<field name="preciocompra" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.name" value="preciocompra"/>
+			<property name="com.jaspersoft.studio.field.label" value="preciocompra"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+		</field>
+		<field name="cantidadexistencia" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="cantidadexistencia"/>
+			<property name="com.jaspersoft.studio.field.label" value="cantidadexistencia"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+		</field>
+		<field name="id_familiaarticulo" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="id_familiaarticulo"/>
+			<property name="com.jaspersoft.studio.field.label" value="id_familiaarticulo"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+		</field>
+		<field name="familiaarticulocodigo" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="familiaarticulocodigo"/>
+			<property name="com.jaspersoft.studio.field.label" value="familiaarticulocodigo"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+		</field>
+		<field name="familiaarticulonombre" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="familiaarticulonombre"/>
+			<property name="com.jaspersoft.studio.field.label" value="familiaarticulonombre"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+		</field>
+		<field name="id_medicamento" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="id_medicamento"/>
+			<property name="com.jaspersoft.studio.field.label" value="id_medicamento"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+		</field>
+		<field name="farmaco" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="farmaco"/>
+			<property name="com.jaspersoft.studio.field.label" value="farmaco"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+		</field>
+		<field name="nombrecomercial" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="nombrecomercial"/>
+			<property name="com.jaspersoft.studio.field.label" value="nombrecomercial"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+		</field>
+		<field name="presentacion" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="presentacion"/>
+			<property name="com.jaspersoft.studio.field.label" value="presentacion"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+		</field>
+		<field name="indicacion" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="indicacion"/>
+			<property name="com.jaspersoft.studio.field.label" value="indicacion"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+		</field>
+		<field name="viaadministracion" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="viaadministracion"/>
+			<property name="com.jaspersoft.studio.field.label" value="viaadministracion"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+		</field>
+		<group name="id_articulo">
+			<groupExpression><![CDATA[$F{id_articulo}]]></groupExpression>
+		</group>
+		<group name="articulocodigo">
+			<groupExpression><![CDATA[$F{articulocodigo}]]></groupExpression>
+		</group>
+		<group name="articulonombre">
+			<groupExpression><![CDATA[$F{articulonombre}]]></groupExpression>
+		</group>
+		<group name="preciocompra">
+			<groupExpression><![CDATA[$F{preciocompra}]]></groupExpression>
+		</group>
+		<group name="cantidadexistencia">
+			<groupExpression><![CDATA[$F{cantidadexistencia}]]></groupExpression>
+		</group>
+		<group name="id_familiaarticulo">
+			<groupExpression><![CDATA[$F{id_familiaarticulo}]]></groupExpression>
+		</group>
+		<group name="familiaarticulocodigo">
+			<groupExpression><![CDATA[$F{familiaarticulocodigo}]]></groupExpression>
+		</group>
+		<group name="familiaarticulonombre">
+			<groupExpression><![CDATA[$F{familiaarticulonombre}]]></groupExpression>
+		</group>
+		<group name="id_medicamento">
+			<groupExpression><![CDATA[$F{id_medicamento}]]></groupExpression>
+		</group>
+		<group name="farmaco">
+			<groupExpression><![CDATA[$F{farmaco}]]></groupExpression>
+		</group>
+		<group name="nombrecomercial">
+			<groupExpression><![CDATA[$F{nombrecomercial}]]></groupExpression>
+		</group>
+		<group name="presentacion">
+			<groupExpression><![CDATA[$F{presentacion}]]></groupExpression>
+		</group>
+		<group name="indicacion">
+			<groupExpression><![CDATA[$F{indicacion}]]></groupExpression>
+		</group>
+		<group name="viaadministracion">
+			<groupExpression><![CDATA[$F{viaadministracion}]]></groupExpression>
+		</group>
+	</subDataset>
+	<parameter name="LogoEmpresa" class="javafx.scene.image.Image" isForPrompting="false"/>
+	<parameter name="SUBREPORTE" class="net.sf.jasperreports.engine.JasperReport"/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM articulosvista]]>
+	</queryString>
+	<field name="id_articulo" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_articulo"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_articulo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+	</field>
+	<field name="articulocodigo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="articulocodigo"/>
+		<property name="com.jaspersoft.studio.field.label" value="articulocodigo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+	</field>
+	<field name="articulonombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="articulonombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="articulonombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+	</field>
+	<field name="preciocompra" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="preciocompra"/>
+		<property name="com.jaspersoft.studio.field.label" value="preciocompra"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+	</field>
+	<field name="cantidadexistencia" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="cantidadexistencia"/>
+		<property name="com.jaspersoft.studio.field.label" value="cantidadexistencia"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+	</field>
+	<field name="id_familiaarticulo" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_familiaarticulo"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_familiaarticulo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+	</field>
+	<field name="familiaarticulocodigo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="familiaarticulocodigo"/>
+		<property name="com.jaspersoft.studio.field.label" value="familiaarticulocodigo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+	</field>
+	<field name="familiaarticulonombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="familiaarticulonombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="familiaarticulonombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+	</field>
+	<field name="id_medicamento" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_medicamento"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_medicamento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+	</field>
+	<field name="farmaco" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="farmaco"/>
+		<property name="com.jaspersoft.studio.field.label" value="farmaco"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+	</field>
+	<field name="nombrecomercial" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombrecomercial"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombrecomercial"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+	</field>
+	<field name="presentacion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="presentacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="presentacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+	</field>
+	<field name="indicacion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="indicacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="indicacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+	</field>
+	<field name="viaadministracion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="viaadministracion"/>
+		<property name="com.jaspersoft.studio.field.label" value="viaadministracion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="articulosvista"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="36">
+			<staticText>
+				<reportElement mode="Opaque" x="3" y="0" width="548" height="30" backcolor="#CAD8ED" uuid="9edad95f-c999-4ca3-9380-0d15693e8585"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LISTADO DE ARTICULOS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<detail>
+		<band height="219" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="19" width="553" height="200" uuid="4e2701f5-c084-4d2a-ba84-b19c95f48b95">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="com.jaspersoft.studio.components.autoresize.proportional" value="true"/>
+					<property name="com.jaspersoft.studio.components.autoresize.next" value="true"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="DatasetArticulos" uuid="b4ea0798-c811-4845-bda0-661ebe6f3ec2">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="59" uuid="a1687ff9-5c5f-4810-83cc-717924f66bfe">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="59" height="30" uuid="12d14144-7614-45e8-acd6-8404d62d8dae"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Id Articulo]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="59" height="30" uuid="a1659f1e-5eb0-4693-a428-b2c18226de70"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph leftIndent="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{id_articulo}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="82" uuid="9772140e-e0fa-44a3-accc-57bbc62fb9e0">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="82" height="30" uuid="43a1f35b-95b6-4fa3-b777-7b12c68eca58"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Código]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="82" height="30" uuid="eee2f95c-8128-48b6-8dc7-487db126cc0a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph leftIndent="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{articulocodigo}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="16b3fc45-86b8-40a0-a7f4-9e67d73a4e44">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="22f72800-d687-4558-adbd-aa4d7945879d"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Nombre]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="30" uuid="2e0be764-cb65-4e5c-aee5-c0a7d02dc058">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+								</reportElement>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph leftIndent="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{articulonombre}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="52" uuid="9ee4ca7d-984e-40ae-a712-fd2193f69307">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="52" height="30" uuid="771b029b-6e39-44ea-806b-74e748156a43"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Precio Compra]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="52" height="30" uuid="86199833-d470-4198-ae1e-75dc65c0d635">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								</reportElement>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<paragraph leftIndent="0" rightIndent="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{preciocompra}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="1a336ca5-d146-4fc6-bc9f-bdda3611a136">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="c90b9656-be1b-44c9-ba03-7b736280c853"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Cantidad en Existencias]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="30" uuid="17ce3dca-7458-4692-bdf1-f29229f60366">
+									<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+								</reportElement>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<paragraph leftIndent="0" rightIndent="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{cantidadexistencia}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="82" uuid="51c8fbc8-b269-4626-9e96-7a6d76dcd610">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="82" height="30" uuid="69542652-06cf-48fb-af05-f65a9a59dc9a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Familia Código]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="82" height="30" uuid="a1634533-525b-473e-9105-02670fe24cf1"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph leftIndent="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{familiaarticulocodigo}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="69" uuid="9d5bfbb7-6335-40e4-ab43-35e97fe4aa20">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="69" height="30" uuid="b9f79626-759d-43a9-9e7b-f3da317849ae"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Familia Nombre]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="69" height="30" uuid="af5e7766-e9b3-49a7-93e3-e9caee411f21"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph leftIndent="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{familiaarticulonombre}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="69" uuid="c80eb0bf-fdc9-4240-8fb4-e075aa87443f">
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="69" height="30" uuid="df24faba-6af8-4dd9-a0c7-94e9db20fa13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Fármaco]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="69" height="30" uuid="f4579db7-b71c-4d61-bc0c-c6465194cd7c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph leftIndent="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{farmaco}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="deb23d85-47bb-4de6-978e-113ff117188c"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="c6ce76ba-6e11-41e2-9415-72dc2eff001b"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="5a79d2a0-bcde-4ad5-adf0-c4eb2066f6dd"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

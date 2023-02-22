@@ -1,0 +1,1729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EjemploPrueba" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d4a1d5eb-82dd-412f-a620-202e4bdf9dba">
+	<property name="template.engine" value="tabular_template"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="src\com\conexion\Postgres_JDBC_DataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TH" mode="Transparent" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Transparent" forecolor="#B89F7D" backcolor="#70A9C6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Transparent" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="tableDataset" uuid="7980ca11-6f9a-48eb-afb3-fef01c4308d6">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="src\com\conexion\Postgres_JDBC_DataAdapter.xml"/>
+		<queryString language="SQL">
+			<![CDATA[select * from pacientesvista]]>
+		</queryString>
+		<field name="id_paciente" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="id_paciente"/>
+			<property name="com.jaspersoft.studio.field.label" value="id_paciente"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="profesion" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="profesion"/>
+			<property name="com.jaspersoft.studio.field.label" value="profesion"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="id_sujeto" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="id_sujeto"/>
+			<property name="com.jaspersoft.studio.field.label" value="id_sujeto"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="fechacreacion" class="java.sql.Timestamp">
+			<property name="com.jaspersoft.studio.field.name" value="fechacreacion"/>
+			<property name="com.jaspersoft.studio.field.label" value="fechacreacion"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="fechanacimiento" class="java.sql.Date">
+			<property name="com.jaspersoft.studio.field.name" value="fechanacimiento"/>
+			<property name="com.jaspersoft.studio.field.label" value="fechanacimiento"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="nombre" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+			<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="apellidos" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="apellidos"/>
+			<property name="com.jaspersoft.studio.field.label" value="apellidos"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="nif" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="nif"/>
+			<property name="com.jaspersoft.studio.field.label" value="nif"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="email" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="email"/>
+			<property name="com.jaspersoft.studio.field.label" value="email"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="telefono" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="telefono"/>
+			<property name="com.jaspersoft.studio.field.label" value="telefono"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="foto" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="foto"/>
+			<property name="com.jaspersoft.studio.field.label" value="foto"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="id_direccion" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="id_direccion"/>
+			<property name="com.jaspersoft.studio.field.label" value="id_direccion"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="direccion" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="direccion"/>
+			<property name="com.jaspersoft.studio.field.label" value="direccion"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="poblacion" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="poblacion"/>
+			<property name="com.jaspersoft.studio.field.label" value="poblacion"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="codigopostal" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="codigopostal"/>
+			<property name="com.jaspersoft.studio.field.label" value="codigopostal"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="provincia" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="provincia"/>
+			<property name="com.jaspersoft.studio.field.label" value="provincia"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="pais" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="pais"/>
+			<property name="com.jaspersoft.studio.field.label" value="pais"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="id_usuario" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="id_usuario"/>
+			<property name="com.jaspersoft.studio.field.label" value="id_usuario"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="usuarioclave" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="usuarioclave"/>
+			<property name="com.jaspersoft.studio.field.label" value="usuarioclave"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="contrasenia" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="contrasenia"/>
+			<property name="com.jaspersoft.studio.field.label" value="contrasenia"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="id_gruposanguineo" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="id_gruposanguineo"/>
+			<property name="com.jaspersoft.studio.field.label" value="id_gruposanguineo"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="gruposanguineo" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="gruposanguineo"/>
+			<property name="com.jaspersoft.studio.field.label" value="gruposanguineo"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="puederecibirde" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="puederecibirde"/>
+			<property name="com.jaspersoft.studio.field.label" value="puederecibirde"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="puededonara" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="puededonara"/>
+			<property name="com.jaspersoft.studio.field.label" value="puededonara"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="id_genero" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="id_genero"/>
+			<property name="com.jaspersoft.studio.field.label" value="id_genero"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="genero" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="genero"/>
+			<property name="com.jaspersoft.studio.field.label" value="genero"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="generonombre" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="generonombre"/>
+			<property name="com.jaspersoft.studio.field.label" value="generonombre"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="id_estadocivil" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="id_estadocivil"/>
+			<property name="com.jaspersoft.studio.field.label" value="id_estadocivil"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="estadocivil" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="estadocivil"/>
+			<property name="com.jaspersoft.studio.field.label" value="estadocivil"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="id_historialclinico" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="id_historialclinico"/>
+			<property name="com.jaspersoft.studio.field.label" value="id_historialclinico"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="enfermedadesfamiliares" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="enfermedadesfamiliares"/>
+			<property name="com.jaspersoft.studio.field.label" value="enfermedadesfamiliares"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="antecedentespatologicos" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="antecedentespatologicos"/>
+			<property name="com.jaspersoft.studio.field.label" value="antecedentespatologicos"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<field name="alergias" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="alergias"/>
+			<property name="com.jaspersoft.studio.field.label" value="alergias"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="pacientesvista"/>
+		</field>
+		<sortField name="id_paciente" order="Descending"/>
+		<sortField name="profesion" order="Descending"/>
+		<sortField name="id_sujeto" order="Descending"/>
+		<sortField name="fechacreacion" order="Descending"/>
+		<sortField name="fechanacimiento" order="Descending"/>
+		<sortField name="nombre" order="Descending"/>
+		<sortField name="apellidos" order="Descending"/>
+		<sortField name="nif" order="Descending"/>
+		<sortField name="email" order="Descending"/>
+		<sortField name="telefono" order="Descending"/>
+		<sortField name="foto" order="Descending"/>
+		<sortField name="id_direccion" order="Descending"/>
+		<sortField name="direccion" order="Descending"/>
+		<sortField name="poblacion" order="Descending"/>
+		<sortField name="codigopostal" order="Descending"/>
+		<sortField name="provincia" order="Descending"/>
+		<sortField name="pais" order="Descending"/>
+		<sortField name="id_usuario" order="Descending"/>
+		<sortField name="usuarioclave" order="Descending"/>
+		<sortField name="contrasenia" order="Descending"/>
+		<sortField name="id_gruposanguineo" order="Descending"/>
+		<sortField name="gruposanguineo" order="Descending"/>
+		<sortField name="puederecibirde" order="Descending"/>
+		<sortField name="puededonara" order="Descending"/>
+		<sortField name="id_genero" order="Descending"/>
+		<sortField name="genero" order="Descending"/>
+		<sortField name="generonombre" order="Descending"/>
+		<sortField name="id_estadocivil" order="Descending"/>
+		<sortField name="estadocivil" order="Descending"/>
+		<sortField name="id_historialclinico" order="Descending"/>
+		<sortField name="enfermedadesfamiliares" order="Descending"/>
+		<sortField name="antecedentespatologicos" order="Descending"/>
+		<sortField name="alergias" order="Descending"/>
+		<group name="id_paciente">
+			<groupExpression><![CDATA[$F{id_paciente}]]></groupExpression>
+		</group>
+		<group name="profesion">
+			<groupExpression><![CDATA[$F{profesion}]]></groupExpression>
+		</group>
+		<group name="id_sujeto">
+			<groupExpression><![CDATA[$F{id_sujeto}]]></groupExpression>
+		</group>
+		<group name="fechacreacion">
+			<groupExpression><![CDATA[$F{fechacreacion}]]></groupExpression>
+		</group>
+		<group name="fechanacimiento">
+			<groupExpression><![CDATA[$F{fechanacimiento}]]></groupExpression>
+		</group>
+		<group name="nombre">
+			<groupExpression><![CDATA[$F{nombre}]]></groupExpression>
+		</group>
+		<group name="apellidos">
+			<groupExpression><![CDATA[$F{apellidos}]]></groupExpression>
+		</group>
+		<group name="nif">
+			<groupExpression><![CDATA[$F{nif}]]></groupExpression>
+		</group>
+		<group name="email">
+			<groupExpression><![CDATA[$F{email}]]></groupExpression>
+		</group>
+		<group name="telefono">
+			<groupExpression><![CDATA[$F{telefono}]]></groupExpression>
+		</group>
+		<group name="foto">
+			<groupExpression><![CDATA[$F{foto}]]></groupExpression>
+		</group>
+		<group name="id_direccion">
+			<groupExpression><![CDATA[$F{id_direccion}]]></groupExpression>
+		</group>
+		<group name="direccion">
+			<groupExpression><![CDATA[$F{direccion}]]></groupExpression>
+		</group>
+		<group name="poblacion">
+			<groupExpression><![CDATA[$F{poblacion}]]></groupExpression>
+		</group>
+		<group name="codigopostal">
+			<groupExpression><![CDATA[$F{codigopostal}]]></groupExpression>
+		</group>
+		<group name="provincia">
+			<groupExpression><![CDATA[$F{provincia}]]></groupExpression>
+		</group>
+		<group name="pais">
+			<groupExpression><![CDATA[$F{pais}]]></groupExpression>
+		</group>
+		<group name="id_usuario">
+			<groupExpression><![CDATA[$F{id_usuario}]]></groupExpression>
+		</group>
+		<group name="usuarioclave">
+			<groupExpression><![CDATA[$F{usuarioclave}]]></groupExpression>
+		</group>
+		<group name="contrasenia">
+			<groupExpression><![CDATA[$F{contrasenia}]]></groupExpression>
+		</group>
+		<group name="id_gruposanguineo">
+			<groupExpression><![CDATA[$F{id_gruposanguineo}]]></groupExpression>
+		</group>
+		<group name="gruposanguineo">
+			<groupExpression><![CDATA[$F{gruposanguineo}]]></groupExpression>
+		</group>
+		<group name="puederecibirde">
+			<groupExpression><![CDATA[$F{puederecibirde}]]></groupExpression>
+		</group>
+		<group name="puededonara">
+			<groupExpression><![CDATA[$F{puededonara}]]></groupExpression>
+		</group>
+		<group name="id_genero">
+			<groupExpression><![CDATA[$F{id_genero}]]></groupExpression>
+		</group>
+		<group name="genero">
+			<groupExpression><![CDATA[$F{genero}]]></groupExpression>
+		</group>
+		<group name="generonombre">
+			<groupExpression><![CDATA[$F{generonombre}]]></groupExpression>
+		</group>
+		<group name="id_estadocivil">
+			<groupExpression><![CDATA[$F{id_estadocivil}]]></groupExpression>
+		</group>
+		<group name="estadocivil">
+			<groupExpression><![CDATA[$F{estadocivil}]]></groupExpression>
+		</group>
+		<group name="id_historialclinico">
+			<groupExpression><![CDATA[$F{id_historialclinico}]]></groupExpression>
+		</group>
+		<group name="enfermedadesfamiliares">
+			<groupExpression><![CDATA[$F{enfermedadesfamiliares}]]></groupExpression>
+		</group>
+		<group name="antecedentespatologicos">
+			<groupExpression><![CDATA[$F{antecedentespatologicos}]]></groupExpression>
+		</group>
+		<group name="alergias">
+			<groupExpression><![CDATA[$F{alergias}]]></groupExpression>
+		</group>
+	</subDataset>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="6321f5e3-86eb-444f-acc1-8daaaa0d6c60"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="9e48917a-7b59-4ffd-baad-725f45563194"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TITLE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="0a399baa-bad3-4b1a-9fe3-bb1c563e6a27"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Add a description here]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="fed27553-a6c4-4a8a-9056-2f6f2589a3e5"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="9f5ad531-d413-49c9-874b-8b99e8150fa6"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="fc593335-5cbf-4caf-97b3-ff897c676bde"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="200" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<componentElement>
+				<reportElement x="0" y="0" width="555" height="975" uuid="13808028-ecb1-4182-95e9-7be441bc71d8">
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="tableDataset" uuid="d3667e11-318b-41a1-a9e4-8f9faa374a50">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:columnGroup width="528" uuid="6b9fbc1b-8c68-4222-996d-12cb9f34ac43">
+						<jr:groupHeader groupName="id_paciente">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="c0aa880d-894e-4138-9e9f-f185b27e43aa"/>
+									<textFieldExpression><![CDATA[$F{id_paciente}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="profesion">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="4b09caf0-bdb0-4030-afcd-91a37ee0de70"/>
+									<textFieldExpression><![CDATA[$F{profesion}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="id_sujeto">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="0d3b87f2-2832-42fb-b2c7-d70a9663582c"/>
+									<textFieldExpression><![CDATA[$F{id_sujeto}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="fechacreacion">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="a4de0ccb-dc63-47bf-926b-322043ce6ec4"/>
+									<textFieldExpression><![CDATA[$F{fechacreacion}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="fechanacimiento">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="893304f0-3bf0-4de9-9cd3-f73d2743a364"/>
+									<textFieldExpression><![CDATA[$F{fechanacimiento}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="nombre">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="7283ba9f-fec8-4a7e-bc3e-92b03112d669"/>
+									<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="apellidos">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="28fe14ad-13ab-463c-b5e9-eab6e140627d"/>
+									<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="nif">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="58ead260-215c-46e7-820c-5a09f7e68783"/>
+									<textFieldExpression><![CDATA[$F{nif}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="email">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="8931d532-0710-45c9-b2b5-f9dfb6b401b8"/>
+									<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="telefono">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="cdb610ff-8485-4e5b-82eb-cc76116cb210"/>
+									<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="foto">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="a84a261d-ed7e-490c-ab1b-d79a681eb528"/>
+									<textFieldExpression><![CDATA[$F{foto}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="id_direccion">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="055f20de-bfbd-4c3e-8aa5-2d914770b5c3"/>
+									<textFieldExpression><![CDATA[$F{id_direccion}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="direccion">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="ca1a4285-cedd-412e-8279-42206d9f7e2a"/>
+									<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="poblacion">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="7a31ee47-1c81-41e1-bb17-7c5cb9a28186"/>
+									<textFieldExpression><![CDATA[$F{poblacion}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="codigopostal">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="ecbe29cb-2b7d-4562-add7-85c6903330c4"/>
+									<textFieldExpression><![CDATA[$F{codigopostal}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="provincia">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="4468478e-5501-4b77-8292-1673a622e33a"/>
+									<textFieldExpression><![CDATA[$F{provincia}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="pais">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="5a6fe3b9-1527-4f50-87a1-87cd26ef79b8"/>
+									<textFieldExpression><![CDATA[$F{pais}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="id_usuario">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="447cda60-3fe2-4ce7-81cb-256e8839c8e9"/>
+									<textFieldExpression><![CDATA[$F{id_usuario}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="usuarioclave">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="86aed75c-7c8b-4b1e-8e3c-76e608f964a2"/>
+									<textFieldExpression><![CDATA[$F{usuarioclave}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="contrasenia">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="79fb16fc-9c19-48e0-986f-55a573fb81e3"/>
+									<textFieldExpression><![CDATA[$F{contrasenia}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="id_gruposanguineo">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="1a693e50-887d-495f-b26e-2b2091ea3739"/>
+									<textFieldExpression><![CDATA[$F{id_gruposanguineo}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="gruposanguineo">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="9d19aa5a-c8ca-48de-926f-cd2df164c585"/>
+									<textFieldExpression><![CDATA[$F{gruposanguineo}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="puederecibirde">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="709a87f0-2201-4596-a75c-968e5d860231"/>
+									<textFieldExpression><![CDATA[$F{puederecibirde}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="puededonara">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="f1be8a37-568e-4de0-b815-16874679cfb5"/>
+									<textFieldExpression><![CDATA[$F{puededonara}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="id_genero">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="69a77ff7-8065-418c-af8f-c05ab6a94269"/>
+									<textFieldExpression><![CDATA[$F{id_genero}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="genero">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="738f7118-66ce-4b8c-9497-1231674fb1f4"/>
+									<textFieldExpression><![CDATA[$F{genero}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="generonombre">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="8d39d344-fb50-43e8-86ce-06c0f8164a22"/>
+									<textFieldExpression><![CDATA[$F{generonombre}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="id_estadocivil">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="5d65636b-d1fe-487f-930b-486a18955bf3"/>
+									<textFieldExpression><![CDATA[$F{id_estadocivil}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="estadocivil">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="7a4ffe39-0fe7-4033-bb6e-92121ef5812a"/>
+									<textFieldExpression><![CDATA[$F{estadocivil}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="id_historialclinico">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="d6c40362-d51a-4901-b231-a0ee434e136b"/>
+									<textFieldExpression><![CDATA[$F{id_historialclinico}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="enfermedadesfamiliares">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="fb0bde60-db6c-4c1d-9345-c212aaa06373"/>
+									<textFieldExpression><![CDATA[$F{enfermedadesfamiliares}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="antecedentespatologicos">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="1424e2e8-52b5-4a33-86b4-94437f576e0d"/>
+									<textFieldExpression><![CDATA[$F{antecedentespatologicos}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupHeader groupName="alergias">
+							<jr:cell style="Table_CH" height="25">
+								<textField>
+									<reportElement x="0" y="0" width="528" height="25" uuid="162f36ce-9f2f-4ef5-810b-665ea9d1a4f7"/>
+									<textFieldExpression><![CDATA[$F{alergias}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:column width="16" uuid="4d45d0e7-c5b3-4399-90b1-56ef545cad95">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="5ff2beb6-6aed-497f-b357-3be91b3634da"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="bd83546c-56f3-4296-b963-c9faebd2b8bb"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[id_paciente]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="4c38cc7a-91ce-4588-a558-87f39107986c"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{id_paciente}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="dd2fa343-32e0-4006-b5fa-236dfcc3e3a5">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="f5b8468d-aca7-4fb8-a509-e53d5d8802ad"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="acaf6887-de99-4a56-b749-a9153e8c01cf"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[profesion]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="a60135f8-804e-4c7e-8d9c-e3ba5a4cb03b"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{profesion}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="bb85e6d0-b69d-4845-912e-59cc2e670613">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="bc20b001-6e65-4ba0-acae-20c45a1ee0f2"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="13e0be9c-47fd-4377-a5dc-d67f5d7cf1f5"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[id_sujeto]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="45080ac6-3c00-4382-babc-dec20f8ccc9f"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{id_sujeto}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="9b3f147d-8ab4-413a-b0f3-8bc5896d9067">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="2e29824c-24a3-4d0b-881b-8e5112031adb"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="b735c5f8-bc40-4566-b575-61abeaa9ffe9"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[fechacreacion]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="f4b75a40-2d8e-4188-8b51-d0f4faafe5f2"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{fechacreacion}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="46c8e61c-c2d7-4609-a7b6-8c9b9cb25b3d">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="29967848-7b10-48fa-bdc8-c571a64a6115"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="76911d14-301a-4d3f-afb1-8521ecbb992d"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[fechanacimiento]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="263e3892-7e46-4ded-84c8-db4a0809153d"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{fechanacimiento}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="d6f694e7-1366-4bd6-ae98-a3f72bff455f">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="4038edba-30ef-4f50-a4b2-79a547b4e056"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="cbfa381d-5f42-4691-b9d1-31d4ab829aa4"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[nombre]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="916cd2bd-e253-4a13-ba9d-b5aa824b07c6"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="8af231f5-dfad-4582-b212-917a10e517a5">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="76294309-1c0b-4a52-b5f7-3886e3fbdfa2"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="3fc4399c-36d1-4f05-a598-102e7a030cee"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[apellidos]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="47ed77bd-91a7-4b03-820e-11d3962a1a78"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="1b061208-f50a-47fe-a1b4-e69d76043bfb">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="5dd8b20e-acd3-4d52-8d39-2637a75acc47"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="136a8515-a314-49cc-b141-90ee07534eca"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[nif]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="6a341369-148f-47df-a458-673a9f9c3ff4"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{nif}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="52ca817c-8b05-4fb5-b680-cd0270eacdc3">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="83bedcb6-071f-49b7-8f70-3ab89bd73abe"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="6c459678-8513-4345-b42f-919f18ad5f8e"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[email]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="3c3a409f-6ea5-49f5-b317-c5ade6b73b1a"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="82143e9e-ea91-4594-815d-1f3174ccbb18">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="169573be-887e-42ef-8878-14da69a1be67"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="18b1714f-1188-4833-be1f-ed3b4aef827b"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[telefono]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="a03143d8-a6d6-4c48-a1b5-8ed8d485075b"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="2f31ca3e-e380-4e30-bcc5-889dda631e8d">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="cab014d7-248c-43e7-83eb-7d160379b0bb"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="a5d82a6b-ca0f-4d51-bdc5-7f4af452c87f"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[foto]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="46c1c5a3-712f-4d42-9403-9c88e56b0e4e"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{foto}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="3faed02d-bdbb-4e52-bfc6-b17644741fdc">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="c8a1318c-dae0-4613-aa7a-89d0aec4c56f"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="2cb4d312-7b74-4f1c-8598-6b88d60b2f1a"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[id_direccion]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="121dae3e-ae20-411d-aa69-0bdd25000280"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{id_direccion}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="50089c89-b651-42a8-b3ae-e3ed462c419f">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="56b67c68-262d-48a1-8dd9-03138c28cb0d"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="196d9cf4-34ac-46cc-8d41-ea88129fc8b4"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[direccion]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="705b2460-29d3-40c6-b17f-210a6d6564e3"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="5d19ca7f-1771-4c24-896d-5980e8e9ac12">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="09dc742e-9ea1-4e4b-9e75-8e11ae7b8a00"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="347f1f82-434c-4519-a6bd-f21969f4aef0"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[poblacion]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="2da929a3-2ae7-4375-8825-41c6a581e61b"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{poblacion}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="d99dd9f0-22fd-46b3-9013-9fcda5f5a817">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="eb8c3f20-7cbb-4049-8f5a-e20462ebeaeb"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="c4335f5f-41be-4191-bff7-a10f48af2c0d"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[codigopostal]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="efb4afb8-f35b-44a3-8058-54ca899bda33"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{codigopostal}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="47e7c90c-8a1b-4a7e-a9bd-745f6c22b734">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="e93bac29-db98-44e3-93dc-ec363e0ba0ee"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="9831c30a-1fe4-40f9-8e78-e25f57820545"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[provincia]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="eb75d90b-21d6-4338-a7fa-3e787eacd587"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{provincia}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="9284dbcf-b618-4931-a286-f55a4b7f5e12">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="0461d8bf-550d-4716-abfc-b97263e98adc"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="6b7beced-9b08-4492-929c-7034c544f09d"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[pais]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="aeaae600-48c9-464b-9435-b4280585c49a"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{pais}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="e32ff635-1c59-4afc-86a9-cb782481d95a">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="30c4c043-b5e2-47f9-8dbf-1a8a67e0ccd1"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="557dd6dd-8a82-4331-b043-a32e3110ede5"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[id_usuario]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="1eab0ba1-e43b-4889-9b9a-acf22984802a"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{id_usuario}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="5b0a2459-b3ee-48c0-a88d-ad8e2bd276db">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="48de4711-8a7d-4ae9-8bc2-8ebcf94d94d8"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="e2281933-ea97-41fd-b4f1-58e82ca52e48"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[usuarioclave]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="0352665f-130b-4490-8bc7-7b62979df587"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{usuarioclave}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="a33d974a-ca3e-4fdb-8eb2-d5d592de3a97">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="8e013d58-3138-4cfe-b9e9-f2cf998b5657"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="07e7fad9-ddb5-4104-b9eb-1c8519e6974c"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[contrasenia]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="06fed029-7a5e-475c-be41-705031574a17"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{contrasenia}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="bbe4bfee-6c03-4021-afa7-382d0fe3b7f8">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="c491fc1d-6a54-4a49-bbea-9e334aa3fe0c"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="6d4c6d04-2eed-4585-8f14-fba2718e1c5b"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[id_gruposanguineo]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="10bb20ee-f912-4ca1-95fe-7cf547df1467"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{id_gruposanguineo}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="497bca33-643d-41e7-afdc-d43afa7556d6">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="d970ec05-b87d-4989-aa15-f061b2bb335d"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="6e616f14-b78f-4044-b9b8-579623ffda89"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[gruposanguineo]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="a892ede4-7013-442b-90cd-4893d4b8893f"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{gruposanguineo}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="67dc7225-b966-41d3-b026-9b6535f6b364">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="616adddc-fd69-4495-8a91-90b2a07dcf56"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="ca995538-11bd-48a3-99a4-350cc3cb2234"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[puederecibirde]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="f7c69f76-262a-461b-965e-cc40aa8ed38a"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{puederecibirde}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="4a99e9a0-63ce-4474-b4b9-b5233f4b84ee">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="57f17931-1135-4ee3-8118-cec1814c09d1"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="2f54413b-b1c0-4827-b582-e30ecfd6e593"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[puededonara]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="0cf848f3-c773-4ee9-ba38-02ac0e95ab89"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{puededonara}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="b593b7ef-a4bd-444c-b6d9-4ca8939aeb48">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="ea2d5ec2-30bb-4e64-9ea5-65084f0a9690"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="ac82d0ba-945b-475a-a98e-4c45683e62d9"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[id_genero]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="70ed9106-d415-4eba-9a16-d68d2d6b5c48"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{id_genero}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="5898ced8-b388-4228-9d24-22e709c4d792">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="64a6996e-8697-4856-a9f5-5ac768246b5d"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="b9fb979f-36a7-4882-b7bd-478146f337f4"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[genero]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="056ab796-d18d-4592-a738-64fba459701a"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{genero}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="dabd7b92-0144-4381-ab13-596dad750d2f">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="b5468361-8dac-4926-b743-03d453b808db"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="81507b58-1601-4f9d-b00a-51f3850888f7"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[generonombre]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="4810011c-1c4c-48c6-aac7-5723cb14298f"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{generonombre}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="ed86e31f-dad4-4ca4-810a-d6cb51f112ac">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="267109a0-3949-46ea-bc7d-5cc6892fcf9b"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="cc8002cc-856b-4ec6-ac71-9c426e8e4c66"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[id_estadocivil]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="1f859b93-5acf-438e-8761-6658290bbb65"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{id_estadocivil}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="fc9adf94-916e-418c-9bfe-dfd601cec7d2">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="3dd4dab2-158c-40be-b422-0be82c64af58"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="d686b8c4-9c93-4231-a3e1-3c46725c7ff9"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[estadocivil]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="76589d9e-2a77-4e8c-974f-6ea0e3f23cf2"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{estadocivil}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="50861b68-866e-4198-9ab2-459bfd3092bf">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="92eac2f3-f7fd-489b-8f64-529881565fde"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="cd3bc3c6-5d67-44a8-a7cd-b1c128cda5f4"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[id_historialclinico]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="6fcaf889-5dca-4152-99f5-4aae72c1f874"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{id_historialclinico}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="b506a2a7-f8cd-4f0a-9f6a-cdb7e8dd3c90">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="d1f84847-8fd1-48c9-9d01-db4c20a791a2"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="05cd7aae-6577-490e-a4f6-d0030c605d52"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[enfermedadesfamiliares]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="8efccde8-0bfb-46c4-b1fc-020ee9a3624b"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{enfermedadesfamiliares}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="68425b30-deec-421c-abbf-2be0a0153e24">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="26d7af5f-1b68-43fc-ad4b-ae5405a1aa51"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="bd88ed59-05e2-4634-a339-6a7b831dd7b8"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[antecedentespatologicos]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="3fc4f5ff-0134-4e5c-b5d9-e1e57fcc5b4b"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{antecedentespatologicos}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="16" uuid="ead39ce1-2fde-4bd3-967d-3da4a095b7fe">
+							<jr:tableHeader style="Table_TH" height="30">
+								<textField>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="00cdbcc8-3279-4780-b9db-b1e4e4db6f6b"/>
+									<textElement>
+										<font size="19" isBold="true"/>
+									</textElement>
+									<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
+								</textField>
+							</jr:tableHeader>
+							<jr:tableFooter style="Table_TH" height="30"/>
+							<jr:columnHeader style="Table_CH" height="30">
+								<staticText>
+									<reportElement mode="Transparent" x="0" y="0" width="16" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="9a6bcd79-9f2a-4f19-9c15-0d75b25e0e01"/>
+									<textElement textAlignment="Center">
+										<font size="14" isBold="true"/>
+									</textElement>
+									<text><![CDATA[alergias]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter style="Table_CH" height="30"/>
+							<jr:detailCell style="Table_TD" height="30">
+								<textField>
+									<reportElement key="" x="0" y="0" width="16" height="30" uuid="898f428d-64ed-4822-a18e-6e696112ed15"/>
+									<box leftPadding="2"/>
+									<textElement>
+										<font fontName="Arial" size="14"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{alergias}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+					</jr:columnGroup>
+				</jr:table>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>
