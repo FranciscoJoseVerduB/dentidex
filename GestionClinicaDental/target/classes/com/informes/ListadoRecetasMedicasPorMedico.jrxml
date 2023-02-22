@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ListadoPacientes" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a1f690a3-5977-4467-85f8-6b0bcd5b7210">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JDBC_Postgre_DataAdapter"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<style name="Title" forecolor="#407D4C" fontName="Arial" fontSize="26" isBold="true"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="LogoEmpresa" class="javafx.scene.image.Image" isForPrompting="false"/>
+	<parameter name="SUBREPORTE" class="net.sf.jasperreports.engine.JasperReport"/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM recetasvista]]>
+	</queryString>
+	<field name="id_historialclinicodetalle" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_historialclinicodetalle"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_historialclinicodetalle"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="recetasvista"/>
+	</field>
+	<field name="fechavisita" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fechavisita"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechavisita"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="recetasvista"/>
+	</field>
+	<field name="indicacionesreceta" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="indicacionesreceta"/>
+		<property name="com.jaspersoft.studio.field.label" value="indicacionesreceta"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="recetasvista"/>
+	</field>
+	<field name="medicamentonombrecomercial" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="medicamentonombrecomercial"/>
+		<property name="com.jaspersoft.studio.field.label" value="medicamentonombrecomercial"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="recetasvista"/>
+	</field>
+	<field name="id_paciente" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_paciente"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_paciente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="recetasvista"/>
+	</field>
+	<field name="pacientenombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pacientenombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="pacientenombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="recetasvista"/>
+	</field>
+	<field name="pacientenif" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pacientenif"/>
+		<property name="com.jaspersoft.studio.field.label" value="pacientenif"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="recetasvista"/>
+	</field>
+	<field name="pacientetelefono" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pacientetelefono"/>
+		<property name="com.jaspersoft.studio.field.label" value="pacientetelefono"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="recetasvista"/>
+	</field>
+	<field name="pacienteprovincia" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="pacienteprovincia"/>
+		<property name="com.jaspersoft.studio.field.label" value="pacienteprovincia"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="recetasvista"/>
+	</field>
+	<field name="id_medico" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_medico"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_medico"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="recetasvista"/>
+	</field>
+	<field name="mediconombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="mediconombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="mediconombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="recetasvista"/>
+	</field>
+	<field name="mediconif" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="mediconif"/>
+		<property name="com.jaspersoft.studio.field.label" value="mediconif"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="recetasvista"/>
+	</field>
+	<field name="medicotelefono" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="medicotelefono"/>
+		<property name="com.jaspersoft.studio.field.label" value="medicotelefono"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="recetasvista"/>
+	</field>
+	<field name="medicoprovincia" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="medicoprovincia"/>
+		<property name="com.jaspersoft.studio.field.label" value="medicoprovincia"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="recetasvista"/>
+	</field>
+	<sortField name="mediconombre"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="36">
+			<staticText>
+				<reportElement mode="Opaque" x="3" y="0" width="548" height="30" backcolor="#CAD8ED" uuid="9edad95f-c999-4ca3-9380-0d15693e8585"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LISTADO DE RECETAS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="51">
+			<textField>
+				<reportElement x="10" y="12" width="530" height="30" uuid="f4ddd610-6b6f-49db-8b4b-b68ecf4d9715"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Médico: " + $F{mediconombre} + " (Id: "  +  $F{id_medico}+ ")"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="98" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="5" y="1" width="548" height="89" uuid="2c9b4eec-220b-46fa-8865-b048ea294e01"/>
+				<box padding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement mode="Opaque" x="1" y="0" width="544" height="20" backcolor="#C2C2C2" uuid="8e0241cc-0f76-4851-be8c-84cbe0835910"/>
+					<box padding="1">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[RECETA]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement key="" x="4" y="22" width="196" height="14" uuid="acf198f4-4781-4f26-be19-751d48b749c9">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dc40cbd4-063b-4943-a3bd-87cea38828fb"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Id Visita: " + $F{id_historialclinicodetalle}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="" x="4" y="38" width="196" height="14" uuid="c5168368-e243-4847-9381-0b97283476fc">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Fecha Visita: " + $F{fechavisita}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="" x="4" y="68" width="196" height="14" uuid="9538353a-c472-4a13-8ad5-e0199a8ccd1b">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Paciente: " + $F{pacientenombre}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="" x="4" y="52" width="196" height="14" uuid="215c5bd4-ce99-4c7c-85e4-23e6b7e529c7">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Id Paciente: " + $F{id_paciente}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="" x="222" y="22" width="312" height="14" uuid="a4be33a1-c6b9-467e-90c0-e61c6b5a038d">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Nombre Comercial: " + $F{medicamentonombrecomercial}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement key="" x="222" y="38" width="75" height="14" uuid="c7ba8a5c-50aa-4787-a492-919207b0a20d">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA["Indicaciones: "]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement x="249" y="54" width="285" height="30" uuid="96ce7f2b-821e-4d38-a793-52913e31ca99">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e9be08e6-d584-42e3-b6fc-441120847832"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{indicacionesreceta}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="deb23d85-47bb-4de6-978e-113ff117188c"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="c6ce76ba-6e11-41e2-9415-72dc2eff001b"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="5a79d2a0-bcde-4ad5-adf0-c4eb2066f6dd"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
